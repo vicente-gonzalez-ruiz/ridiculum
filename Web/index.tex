@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{tex4ht}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} 
+%\usepackage[spanish]{babel}
+\makeatletter 
+\let\ifes@LaTeXe\iftrue 
+\makeatother
+
+\begin{document}
+
+\title{Curriculum Vitae}
+\author{Vicente González Ruiz}
+
+%\begin{document}
+
+\maketitle
+
+\renewcommand{\refname}{Journal papers / Artículos en revistas}
+\input{Articles.bbl}
+
+\renewcommand{\refname}{Conference papers / Ponencias en congresos}
+\input{InProceedings.bbl}
+
+\renewcommand{\refname}{Books / Libros}
+\input{Books.bbl}
+
+\renewcommand{\refname}{Book chapters / Capítulos de libro}
+\input{InBooks.bbl}
+
+\renewcommand{\refname}{Projects / Proyectos}
+\input{Projects.bbl}
+
+\renewcommand{\refname}{Contracts / Contratos}
+\input{Contracts.bbl}
+
+\renewcommand{\refname}{Phd thesis supervision / Supervisión de tesis}
+\input{PhdThesis.bbl}
+
+\section*{PhD thesis}
+\input{../mi-tesis}
+
+%\renewcommand{\refname}{Subjects / Asignaturas impartidas}
+\section*{Teaching / Docencia}
+\input{Asignaturas.bbl}
+
+\renewcommand{\refname}{Courses / Cursos impartidos}
+\input{Cursos.bbl}
+
+\renewcommand{\refname}{Final projects supervision / Supervisión de
+  proyectos final de carrera}
+\input{PFC.bbl}
+
+\end{document}
