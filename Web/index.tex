@@ -8,19 +8,21 @@
 \let\ifes@LaTeXe\iftrue 
 \makeatother
 
-\begin{document}
-
 \title{Curriculum Vitae}
-\author{%
+
+\newcommand{\researcherid}{http://www.researcherid.com/rid/\input{ResearcherID}}
+
+\author{
   \begin{tabular}{c}
     \input{nombre} \input{apellidos} \\
-    \url{http://www.researcherid.com/rid/\input{Researcher_ID}} \\
+    \url{\researcherid} \\
     \url{https://orcid.org/\input{ORCID}} \\
-    \url{https://scholar.google.es/citations?hl=es&user=\input{Google_user}
+    \url{https://scholar.google.es/citations?hl=es&user=\input{Google_user}}
   \end{tabular}
 }
+%\author{\input{nombre} \input{apellidos}}
 
-%\begin{document}
+\begin{document}
 
 \maketitle
 
