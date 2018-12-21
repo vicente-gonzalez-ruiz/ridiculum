@@ -2,7 +2,8 @@ default:	index.html
 
 all:	index.html entries
 
-BIBINPUTS := "$(HOME)/bibs:"
+TEXINPUTS := "$(HOME)/home/personal_data:"
+BIBINPUTS := "$(HOME)/home:"
 
 # Regla para generar los .bbl a partir de los .tex
 %.bbl:	../%.tex
@@ -11,7 +12,7 @@ BIBINPUTS := "$(HOME)/bibs:"
 
 index.html:	*.tex \
 		../*.tex \
-		$(HOME)/bibs/vruiz.bib \
+		$(HOME)/home/vruiz.bib \
 		Articles.bbl \
 		Asignaturas.bbl \
 		Books.bbl \
