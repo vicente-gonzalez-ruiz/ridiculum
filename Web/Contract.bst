@@ -12,7 +12,7 @@ ENTRY
     head
 %	    Nombre del investigador principal.
     budget
-%	     Financiación del proyecto.
+%	    Presupuesto del contrato.
     number_of_researchers
 %	    Pues eso.
   }

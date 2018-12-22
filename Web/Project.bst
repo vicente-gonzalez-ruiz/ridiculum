@@ -6,6 +6,7 @@ ENTRY
     entity
 %	    Nombre de la entidad financiadora.
     program
+%           Nombre del programa/convocatoria.
     start
 %	    Fecha de comienzo del proyecto.
     finish
@@ -13,7 +14,7 @@ ENTRY
     head
 %	    Nombre del investigador principal.
     code
-%	    Código del proyecto.
+%	    Código del proyecto, es decir, una cadena indicando un acrónimo.
     budget
 %	    Financiación del proyecto.
     number_of_researchers
