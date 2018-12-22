@@ -2,7 +2,7 @@ default:	index.html
 
 all:	index.html entries
 
-TEXINPUTS := "$(HOME)/home/personal_data:"
+TEXINPUTS := ":.:..:$(HOME)/home/personal_data:"
 BIBINPUTS := "$(HOME)/home:"
 
 # Regla para generar los .bbl a partir de los .tex
@@ -23,7 +23,27 @@ index.html:	*.tex \
 		InProceedings.bbl \
 		PFC.bbl \
 		PhdThesis.bbl \
-		Projects.bbl
+		Projects.bbl \
+		ResearcherID_URL.tex \
+		ORCID_URL.tex \
+		Scholar_URL.tex \
+		UAL_URL.tex \
+		GitHub_URL.tex
+
+ResearcherID_URL.tex:	$(HOME)/home/personal_data/ResearcherID.tex
+	(printf '\url{https://www.researcherid.com/rid/'; cat $^; printf '}\n') > $@
+
+ORCID_URL.tex:	$(HOME)/home/personal_data/ORCID.tex
+	(printf '\url{https://orcid.org/'; cat $^; printf '}\n') > $@
+
+Scholar_URL.tex:	$(HOME)/home/personal_data/Google_user.tex
+	(printf  '\url{https://scholar.google.es/citations?hl=es&user='; cat $^; printf '}\n') > $@
+
+UAL_URL.tex:	$(HOME)/home/personal_data/UAL_user.tex
+	(printf  '\url{https://www.ual.es/~'; cat $^; printf '}\n') > $@
+
+GitHub_URL.tex:	$(HOME)/home/personal_data/GitHub_user.tex
+	(printf  '\url{https://github.com/'; cat $^; printf '}\n') > $@
 
 # Regla para generar los .html a partir de los .tex
 %.html: %.tex
@@ -34,7 +54,7 @@ index.html:	*.tex \
 #       (export TEXINPUTS=${TEXINPUTS}; tth $* > $*.html)
 
 clean:
-	rm -f *.bbl *.blg *.log *.out *.aux *.html *.dvi *.idv *.lg *.css *.4ct *.4tc *.tmp *.xref
+	rm -f *.bbl *.blg *.log *.out *.aux *.html *.dvi *.idv *.lg *.css *.4ct *.4tc *.tmp *.xref ResearcherID_URL.tex ORCID_URL.tex Scholar_URL.tex UAL_URL.tex GitHub_URL.tex
 
 mrproper:
 	make clean
