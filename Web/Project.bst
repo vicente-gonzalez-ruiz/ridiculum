@@ -21,6 +21,8 @@ ENTRY
 %	    Pues eso.
     group
 %           Yes | No. Define si se trata de personas o de grupos de personas
+    output
+% Resultado del proyecto
   }
 % There are no integer entry variables
   {}
@@ -108,7 +110,7 @@ FUNCTION {project}
   ".}\newline " write$
 
   % Entidad financiadora
-  "Founding organization: " write$
+  "Founding entity: " write$
   entity write$
   ". " write$
   program write$
@@ -142,6 +144,15 @@ FUNCTION {project}
     }
     if$
     ".\newline " write$
+  }
+  if$
+
+  % Resultado del proyecto
+  output empty$ {
+  } {
+    "Output: " write$
+    output write$
+    "." write$
   }
   if$
 

@@ -55,7 +55,7 @@ FUNCTION {contract}
   ".}\newline " write$
 
   % Entidad financiadora
-  "Founding organization: " write$
+  "Founding company: " write$
   entity write$
   ".\newline " write$
 
