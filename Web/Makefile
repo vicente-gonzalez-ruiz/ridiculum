@@ -61,7 +61,7 @@ mrproper:
 	rm *.bib
 
 entries:
-	for i in `grep bibcite index.aux | cut -f 2 -d "{" | cut -f 1 -d "}"`; do bibtool -X $$i $(HOME)/home/vruiz.bib -o $$i.bib -- 'delete.field={quality quality_long url impact rankings history abstract es_abstract}'; done
+	for i in `grep bibcite index.aux | cut -f 2 -d "{" | cut -f 1 -d "}"`; do bibtool -X $$i $(HOME)/home/vruiz.bib -o $$i.bib -- 'delete.field={quality quality_long url history abstract es_abstract}'; done
 
 publish:
 	scp index.html dali.hpca.ual.es:public_html/index.html
