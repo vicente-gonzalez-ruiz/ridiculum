@@ -26,38 +26,46 @@ FUNCTION {init.state.consts}
 }
 
 FUNCTION {output.bibitem}
-{ %newline$
-  %"\bibitem{" write$
-  %cite$ write$
-  %"}" write$
-  %newline$
-  %""
-  %before.all 'output.state :=
+{ newline$
+  "\bibitem{" write$
+  cite$ write$
+  "}" write$
+  newline$
+  ""
+  before.all 'output.state :=
 }
 
 % This function finishes all entries.
 FUNCTION {fin.entry}
-{ %add.period$
-  %write$
+{ add.period$
+  write$
   newline$
 }
 
 FUNCTION {asignatura}
-{ %output.bibitem
+{ output.bibitem
+  %"Course/Curso: " write$
   curso write$
-  " & " write$
+  %" & " write$
+  ". " write$
   %"\textbf{Título:} " write$
+  "\emph{" write$
   titulo write$
+  "}" write$
   %"\newline" write$
-  "\\" write$
+  %"\\" write$
+  ". " write$
   %"\textbf{Duración:} " write$
-  %duracion write$
+  duracion write$
   %"\newline" write$
+  ". " write$
   %"\textbf{Programa:} " write$
-  %programa write$
+  programa write$
   %"\newline" write$
+  ". " write$
   %" \textbf{Centro:} " write$
-  %centro write$
+  centro write$
+  ". " write$
   fin.entry
 }
 
@@ -107,14 +115,14 @@ ITERATE {longest.label.pass}
 %
 % We also call init.state.consts, for use by the output routines.
 FUNCTION {begin.bib}
-{ %preamble$ %empty$
-  %  'skip$
-  %  { preamble$ write$ newline$ }
-  %if$
-  %"\begin{thebibliography}{"  longest.label  * "}" * write$ newline$
-  "\begin{tabular}{ll}" write$ newline$
-  "Course~& Subject\\" write$ newline$
-  "Curso & Asignatura\\" write$ newline$
+{ preamble$ empty$
+    'skip$
+    { preamble$ write$ newline$ }
+  if$
+  "\begin{thebibliography}{"  longest.label  * "}" * write$ newline$
+  %"\begin{tabular}{ll}" write$ newline$
+  %"Course~& Subject\\" write$ newline$
+  %"Curso & Asignatura\\" write$ newline$
   %"\hrule" write$ newline$
 }
 
@@ -128,9 +136,9 @@ ITERATE {call.type$}
 % Finally, we finish up by writing the `\end{thebibliography}' command.
 FUNCTION {end.bib}
 { %newline$
-  %"\end{thebibliography}" write$ newline$
+  "\end{thebibliography}" write$ newline$
   %"\hule" write$ newline$
-  "\end{tabular}" write$ newline$
+  %"\end{tabular}" write$ newline$
 }
 
 EXECUTE {end.bib}

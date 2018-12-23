@@ -53,7 +53,9 @@ FUNCTION {PFC}
 { output.bibitem
   alumno write$
   ". " write$
+  "\emph{" write$
   titulo write$
+  "}" write$
   ". " write$
   titulacion write$
   ". " write$

@@ -44,11 +44,14 @@ FUNCTION {fin.entry}
 
 FUNCTION {curso}
 { output.bibitem
+  "\emph{" write$
   titulo write$
+  "}" write$
   ". " write$
   centro write$
   ". " write$
   fecha write$
+  ". " write$
   fin.entry
 }
 
