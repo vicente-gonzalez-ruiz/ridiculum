@@ -15,7 +15,7 @@ ENTRY
 %	    Obtenida.
     fecha
 %           De finalización.
-    director
+    directores
 %	    Del proyecto.
     observaciones
   }
@@ -59,7 +59,7 @@ FUNCTION {PFC}
   ". " write$
   titulacion write$
   ". " write$
-  director write$
+  directores write$
   ". " write$
   fecha write$
   ". " write$

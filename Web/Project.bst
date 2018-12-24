@@ -1,30 +1,18 @@
 % BibTeX standard bibliography style `proyectos'
 
 ENTRY
-  { title
-%	    Título del proyecto.
-    entity
-%	    Nombre de la entidad financiadora.
-    program
-%           Nombre del programa/convocatoria.
-    start
-%	    Fecha de comienzo del proyecto.
-    finish
-%	    Fecha de fin del proyecto.
-    head
-%	    Nombre del investigador principal.
-    code
-%	    Código del proyecto, es decir, una cadena indicando un acrónimo.
-    budget
-%	    Financiación del proyecto.
-    number_of_researchers
-%	    Pues eso.
-    group
-%           Yes | No. Define si se trata de personas o de grupos de personas
-    output
-% Resultado del proyecto
+  { title      % Título del proyecto.
+    entity     % Nombre de la entidad financiadora.
+    program    % Nombre del programa/convocatoria.
+    start      % Fecha de comienzo del proyecto.
+    finish     % Fecha de fin del proyecto.
+    head       % Nombre del investigador principal.
+    code       % Código del proyecto, es decir, una cadena indicando un acrónimo.
+    budget     % Financiación del proyecto.
+    number_of_researchers % Pues eso.
+    evidences  % Certificados, implementaciones, etc.
   }
-% There are no integer entry variables
+  % There are no integer entry variables
   {}
   { label }
 
@@ -97,7 +85,7 @@ FUNCTION {project2}
 FUNCTION {project}
 { output.bibitem
 
-  % Título y código, si existe
+  % Título y código
   "\textbf{" write$
   title write$
   code empty$ {
@@ -107,51 +95,77 @@ FUNCTION {project}
     ")" write$
   }
   if$
-  ".}\newline " write$
+  ".}" write$
 
   % Entidad financiadora
-  "Founding entity: " write$
-  entity write$
-  ". " write$
-  program write$
-  ".\newline " write$
-
+  entity empty$ {
+    }{
+    "\newline " write$
+    "Founding entity: " write$
+    entity write$
+    ". " write$
+  }
+  if$
+  
+  % Programa
+  program empty$ {
+    }{
+    "\newline " write$
+    "Program: " write$
+    program write$
+    "." write$
+  }
+  if$
+  
   % Investigador principal
-  "Main researchers: " write$
-  head write$
-  ".\newline " write$
+  head empty$ {
+    }{
+    "\newline " write$
+    "Main researchers: " write$
+    head write$
+    "." write$
+  }
+  if$
 
   % Financiación
-  "Budget: " write$
-  budget write$
-  ".\newline " write$
+  budget empty$ {
+    }{
+    "\newline " write$
+    "Budget: " write$
+    budget write$
+    "." write$
+  }
+  if$
 
   % Duración
+  "\newline " write$
   "From " write$
   start write$
   " until " write$
   finish write$
-  ".\newline " write$
+  "." write$
 
   % Número de investigadores
   number_of_researchers empty$ {
-    } {
+    }{
+    "\newline " write$
     "Number of researchers: " write$
     number_of_researchers write$
-    group "yes" = {
-      " groups" write$
-      } {
-    }
-    if$
-    ".\newline " write$
+    %group "yes" = {
+    %  " groups" write$
+    %  } {
+    %}
+    %if$
+    "." write$
   }
   if$
 
-  % Resultado del proyecto
-  output empty$ {
+  % Evicencias
+  evidences empty$ {
   } {
-    "Output: " write$
-    output write$
+    "\newline " write$
+    "Evidences: " write$
+    evidences write$
     "." write$
   }
   if$
