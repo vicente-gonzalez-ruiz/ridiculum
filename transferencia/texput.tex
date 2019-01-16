@@ -6,6 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish,activeacute]{babel}
 \usepackage{hyperref}
+\usepackage{eurosym}
 
 \textwidth=1.4\textwidth
 \textheight=1.1\textheight
@@ -76,23 +77,38 @@
 \item Libros: \input{num_libros}
 \item Capítulos de libro: \input{num_capitulos_libro}
 \item \input{ResearcherID_URL}:
-\item \input{Scholar_URL}:
-%\item \href{\ResearcherID}{Información en ResearcherID}:
-%\item \href{https://scholar.google.es/citations?hl=es&user=\input{Google_user}}{Información en Google Académico}:
-\end{enumerate}
-\end{document}
+\begin{verbatim}
+Total Articles in Publication List:     20
+Articles With Citation Data:            19
+Sum of the Times Cited:                 76
+Average Citations per Article:          4.00
+h-index:                                4
+\end{verbatim}
 
-\section{Resumen libre del currículum}
+\item \input{Scholar_URL}:
+\begin{verbatim}
+                Total   Desde 2014
+Citas           270     110
+Índice h        8       5
+Índice i10      6       1
+\end{verbatim}
+\end{enumerate}
+
+%\section{Resumen libre del currículum}
 %\noindent (Máximo 3500 caracteres, incluyendo espacios en blanco)
-\input{resumen_libre}
-  
+%\input{resumen_libre}
+
+\renewcommand{\refname}{}
+
 \section{Transferencia del conocimiento}
 
 \subsection{Proyectos}
-%\input{proyectos_transferencia}
+\vspace{-5ex}
+\input{proyectos_transferencia.bbl}
 
-%\subsection{Contratos}
-%\input{contratos_transferencia}
+\subsection{Contratos}
+\vspace{-5ex}
+\input{contratos_transferencia.bbl}
 
 %\subsection{Patentes}
 

@@ -15,6 +15,7 @@ texput.pdf:	*.tex \
 		$(HOME)/home/personal_data \
 		$(HOME)/home/vruiz.bib \
 		proyectos_transferencia.bbl \
+		contratos_transferencia.bbl \
 		ResearcherID_URL.tex \
 		ORCID_URL.tex \
 		Scholar_URL.tex \
