@@ -1,0 +1,97 @@
+% Curriculum Vitae Abreviado
+% Modelo propuesto por el Ministerio de Economía y Competitividad
+
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{hyperref}
+
+\textwidth=1.4\textwidth
+\textheight=1.1\textheight
+\hoffset=-2.5cm
+\voffset=-1cm
+\sloppy
+
+%\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
+%\pagestyle{fancyplain} % Activa fancyplain
+
+% Definición de las cabeceras
+%\cfoot[]{} % Elimina el número a pie de página
+
+\title{Curriculum Vitae Abreviado (sólo transferencia)}
+\author{
+  \begin{tabular}{ll}
+    \textbf{Nombre:} & \input{nombre} \\
+    \textbf{NIF:} & \input{apellidos}
+  \end{tabular}
+}
+
+\begin{document}
+\def\normalfont{\sffamily}
+\sffamily
+%\pagestyle{empty} % Elimina las cabeceras
+\maketitle
+
+\section{Datos personales}
+
+\begin{tabular}{ll}
+  Nombre y apellidos: & \input{nombre} \input{apellidos} \\
+  DNI/NIE/pasaporte: & \input{DNI} \\
+  Edad: & \input{edad} \\
+  Researcher ID: & \input{ResearcherID} \\
+  Código Orcid: & \input{ORCID}
+\end{tabular}
+
+\subsection{Situación profesional actual}
+
+\begin{tabular}{ll}
+  Organismo: & \input{organismo} \\
+  Dpto./Centro & \input{departamento} \\
+  Dirección: & \input{direccion} \\
+  Teléfono: & \input{telefono} \\
+  Correo electrónico: & \input{email} \\
+  Categoría profesional: & \input{categoria} \\
+  Fecha inicio: & \input{inicio} \\
+  Espec. cód. UNESCO: & \input{cods_UNESCO} \\
+  Palabras clave: & \input{palabras_clave}
+\end{tabular}
+
+\subsection{Formación académica}
+
+\begin{tabular}{lll}
+  Licenciatura/Grado/Doctorado & Universidad & Año \\
+  \hline
+  \input{doctor_en} & \input{doctorado_por} & \input{doctor_anho} \\
+  \input{licenciado_en} & \input{licenciado_por} & \input{licenciado_anho} \\
+  \input{diplomado_en} & \input{diplomado_por} & \input{diplomado_anho}
+\end{tabular}
+
+\subsection{Indicadores generales de calidad de la producción científica}
+
+\begin{enumerate}
+\item Sexenios de investigación: \input{sexenios_anhos}
+\item Número de tesis dirigidas: \input{num_tesis_dirigidas}
+\item Artículos en revistas incluídas en el JCR: \input{num_articulos_JCR}
+\item Libros: \input{num_libros}
+\item Capítulos de libro: \input{num_capitulos_libro}
+\item \href{http://www.researcherid.com/rid/\input{ResearcherID}{Información en ResearcherID}:
+\item \href{https://scholar.google.es/citations?hl=es&user=\input{Google_user}}{Información en Google Académico}:
+\end{enumerate}
+
+\section{Resumen libre del currículum}
+%\noindent (Máximo 3500 caracteres, incluyendo espacios en blanco)
+\input{resumen_libre}
+  
+\section{Transferencia del conocimiento}
+
+\subsection{Proyectos}
+\input{proyectos_transferencia}
+
+%\subsection{Contratos}
+%\input{contratos_transferencia}
+
+%\subsection{Patentes}
+
+\end{document}
