@@ -5,7 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,activeacute]{babel}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{eurosym}
 
 \textwidth=1.4\textwidth
@@ -25,8 +25,8 @@
 \author{
   \begin{tabular}{ll}
     \textbf{Nombre:} & \input{nombre} \\
-    \textbf{NIF:} & \input{apellidos} \\
-    \multicolumn{2}{c}{\href{http://www.hpca.ual.es/~vruiz}{Versión online del CV}}
+    \textbf{NIF:} & \input{apellidos} \\\\
+    \multicolumn{2}{c}{\framebox{\href{http://www.hpca.ual.es/~vruiz}{Versión online}}}
   \end{tabular}
 }
 
@@ -36,7 +36,7 @@
 %\pagestyle{empty} % Elimina las cabeceras
 \maketitle
 
-\section{Datos personales}
+\section*{Datos personales}
 \begin{tabular}{ll}
   Nombre y apellidos: & \input{nombre} \input{apellidos} \\
   DNI/NIE/pasaporte: & \input{DNI} \\
@@ -45,7 +45,7 @@
   Código Orcid: & \input{ORCID}
 \end{tabular}
 
-\subsection{Situación profesional actual}
+\section*{Situación profesional actual}
 
 \begin{tabular}{ll}
   Organismo: & \input{organismo} \\
@@ -59,41 +59,54 @@
   Palabras clave: & \input{palabras_clave}
 \end{tabular}
 
-\subsection{Formación académica}
+%\subsection{Formación académica}
+%
+%\begin{tabular}{lll}
+%  Licenciatura/Grado/Doctorado & Universidad & Año \\
+%  \hline
+%  \input{doctor_en} & \input{doctorado_por} & \input{doctor_anho} \\
+%  \input{licenciado_en} & \input{licenciado_por} & \input{licenciado_anho} \\
+%  \input{diplomado_en} & \input{diplomado_por} & \input{diplomado_anho}
+%\end{tabular}
 
-\begin{tabular}{lll}
-  Licenciatura/Grado/Doctorado & Universidad & Año \\
-  \hline
-  \input{doctor_en} & \input{doctorado_por} & \input{doctor_anho} \\
-  \input{licenciado_en} & \input{licenciado_por} & \input{licenciado_anho} \\
-  \input{diplomado_en} & \input{diplomado_por} & \input{diplomado_anho}
+\section*{Indicadores generales de la transferencia del conocimiento}
+\begin{tabular}{ll}
+Patentes: & 0 \\
+Modelos de utilidad: & 0 \\
+Proyectos software/libre: & 1/1 (\href{https://www.p2psp.org}{P2PSP.org}) \\
+Acuerdos de explotación: & 0 \\
+Contratos con empresas: & 6 (ver \hyperref[sec:contratos]{Contratos})\\
+Convenios I+D+i: & 1 (ver \hyperref[sec:convenios]{Convenios}) \\
+Creación de empresas de base tecnológia: & 2 (\href{http://www.infocif.es/ficha-empresa/iptv-solutions-sl}{IPTV Solutions SL} y \href{http://www.luxunda.es/}{Luxunda SL})\\
+Proyectos colaborativos: & 9 (\href{https://summerofcode.withgoogle.com}{GSoC} y \href{https://www.esa.int/Our_Activities/Space_Engineering_Technology/SOCIS_The_ESA_Summer_of_Code_in_Space}{SOCIS}, ver \hyperref[sec:proyectos]{Proyectos}) \\
+Workshops (con empresas): & 1 (ver \hyperref[sec:workshops]{Workshops})
 \end{tabular}
 
-\subsection{Indicadores generales de calidad de la producción científica}
+%\subsection{Indicadores generales de calidad de la producción científica}
+%
+%\begin{enumerate}
+%\item Sexenios de investigación: \input{sexenios_anhos}
+%\item Número de tesis dirigidas: \input{num_tesis_dirigidas}
+%\item Artículos en revistas incluídas en el JCR: \input{num_articulos_JCR}
+%\item Libros: \input{num_libros}
+%\item Capítulos de libro: \input{num_capitulos_libro}
+%\item \input{ResearcherID_URL}:
+%\begin{verbatim}
+%Total Articles in Publication List:     20
+%Articles With Citation Data:            19
+%Sum of the Times Cited:                 76
+%Average Citations per Article:          4.00
+%h-index:                                4
+%\end{verbatim}
 
-\begin{enumerate}
-\item Sexenios de investigación: \input{sexenios_anhos}
-\item Número de tesis dirigidas: \input{num_tesis_dirigidas}
-\item Artículos en revistas incluídas en el JCR: \input{num_articulos_JCR}
-\item Libros: \input{num_libros}
-\item Capítulos de libro: \input{num_capitulos_libro}
-\item \input{ResearcherID_URL}:
-\begin{verbatim}
-Total Articles in Publication List:     20
-Articles With Citation Data:            19
-Sum of the Times Cited:                 76
-Average Citations per Article:          4.00
-h-index:                                4
-\end{verbatim}
-
-\item \input{Scholar_URL}:
-\begin{verbatim}
-                Total   Desde 2014
-Citas           270     110
-Índice h        8       5
-Índice i10      6       1
-\end{verbatim}
-\end{enumerate}
+%\item \input{Scholar_URL}:
+%\begin{verbatim}
+%                Total   Desde 2014
+%Citas           270     110
+%Índice h        8       5
+%Índice i10      6       1
+%\end{verbatim}
+%\end{enumerate}
 
 %\section{Resumen libre del currículum}
 %\noindent (Máximo 3500 caracteres, incluyendo espacios en blanco)
@@ -101,15 +114,24 @@ Citas           270     110
 
 \renewcommand{\refname}{}
 
-\section{Transferencia del conocimiento}
+\section*{Contratos}
+\label{sec:contratos}
+\vspace{-5ex}
+\input{contratos_transferencia.bbl}
 
-\subsection{Proyectos}
+\section*{Convenios}
+\label{sec:convenios}
+\vspace{-5ex}
+\input{convenios_transferencia.bbl}
+
+\section*{Proyectos}
+\label{sec:proyectos}
 \vspace{-5ex}
 \input{proyectos_transferencia.bbl}
 
-\subsection{Contratos}
+\section*{Workshops}
 \vspace{-5ex}
-\input{contratos_transferencia.bbl}
+\input{workshops.bbl}
 
 %\subsection{Patentes}
 

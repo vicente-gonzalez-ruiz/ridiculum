@@ -55,28 +55,28 @@ FUNCTION {contract}
   ".}\newline " write$
 
   % Entidad financiadora
-  "Founding company: " write$
+  "\emph{Founding company:} " write$
   entity write$
   ".\newline " write$
 
   % Investigador principal
-  "Main researcher: " write$
+  "\emph{Main researcher:} " write$
   head write$
   ".\newline " write$
 
   % Financiación
   budget empty$ {
   } {
-    "Budget: " write$
+    "\emph{Budget:} " write$
     budget write$
     ".\newline " write$
   }
   if$
 
   % Duración
-  "From " write$
+  "\emph{From} " write$
   start write$
-  " until " write$
+  " \emph{until} " write$
   finish write$
   ".\newline " write$
 

@@ -101,7 +101,7 @@ FUNCTION {project}
   entity empty$ {
     }{
     "\newline " write$
-    "Founding entity: " write$
+    "\emph{Founding entity:} " write$
     entity write$
     ". " write$
   }
@@ -111,7 +111,7 @@ FUNCTION {project}
   program empty$ {
     }{
     "\newline " write$
-    "Program: " write$
+    "\emph{Program:} " write$
     program write$
     "." write$
   }
@@ -121,7 +121,7 @@ FUNCTION {project}
   head empty$ {
     }{
     "\newline " write$
-    "Main researchers: " write$
+    "\emph{Main researchers:} " write$
     head write$
     "." write$
   }
@@ -131,7 +131,7 @@ FUNCTION {project}
   budget empty$ {
     }{
     "\newline " write$
-    "Budget: " write$
+    "\emph{Budget:} " write$
     budget write$
     "." write$
   }
@@ -139,9 +139,9 @@ FUNCTION {project}
 
   % Duración
   "\newline " write$
-  "From " write$
+  "\emph{From} " write$
   start write$
-  " until " write$
+  " \emph{until} " write$
   finish write$
   "." write$
 
@@ -149,7 +149,7 @@ FUNCTION {project}
   number_of_researchers empty$ {
     }{
     "\newline " write$
-    "Number of researchers: " write$
+    "\emph{Number of researchers:} " write$
     number_of_researchers write$
     %group "yes" = {
     %  " groups" write$
@@ -164,7 +164,7 @@ FUNCTION {project}
   evidences empty$ {
   } {
     "\newline " write$
-    "Evidences: " write$
+    "\emph{Evidences:} " write$
     evidences write$
     "." write$
   }
