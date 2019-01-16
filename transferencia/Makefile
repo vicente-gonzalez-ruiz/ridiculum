@@ -22,13 +22,13 @@ texput.pdf:	*.tex \
 		GitHub_URL.tex
 
 ResearcherID_URL.tex:	$(HOME)/home/personal_data/ResearcherID.tex
-	(printf '\url{https://www.researcherid.com/rid/'; cat $^; printf '}\n') > $@
+	(printf '\href{https://www.researcherid.com/rid/'; cat $^; printf '}{Información en ResearcherID}\n') > $@
 
 ORCID_URL.tex:	$(HOME)/home/personal_data/ORCID.tex
 	(printf '\url{https://orcid.org/'; cat $^; printf '}\n') > $@
 
 Scholar_URL.tex:	$(HOME)/home/personal_data/Google_user.tex
-	(printf  '\url{https://scholar.google.es/citations?hl=es&user='; cat $^; printf '}\n') > $@
+	(printf  '\href{https://scholar.google.es/citations?hl=es&user='; cat $^; printf '}{Información en Google Académico}\n') > $@
 
 UAL_URL.tex:	$(HOME)/home/personal_data/UAL_user.tex
 	(printf  '\url{https://www.ual.es/~'; cat $^; printf '}\n') > $@
