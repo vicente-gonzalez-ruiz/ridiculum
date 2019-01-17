@@ -7,6 +7,7 @@
 \usepackage[spanish,activeacute]{babel}
 \usepackage[hidelinks]{hyperref}
 \usepackage{eurosym}
+\usepackage{color}
 
 \textwidth=1.4\textwidth
 \textheight=1.1\textheight
@@ -20,6 +21,25 @@
 
 % Definición de las cabeceras
 %\cfoot[]{} % Elimina el número a pie de página
+
+\definecolor{dark-red}{rgb}{0.4,0.15,0.15}
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\definecolor{medium-blue}{rgb}{0,0,0.5}
+
+\hypersetup{
+  pdfauthor = {González Ruiz, Vicente},
+  pdftitle = {CVA (transferencia)},
+  pdfsubject = {I+D+i},
+  %pdfkeywords = {Keyword1, Keyword2, ...},
+  pdfcreator = {LaTeX with hyperref package},
+  pdfproducer = {pdflatex},
+  colorlinks,
+  pdfborder={0 0 0},
+  linkcolor={dark-red},
+  citecolor={dark-blue}, 
+  urlcolor={medium-blue},
+  linktocpage
+}
 
 \title{Curriculum Vitae Abreviado (sólo transferencia)}
 \author{
