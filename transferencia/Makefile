@@ -18,6 +18,8 @@ texput.pdf:	*.tex \
 		contratos_transferencia.bbl \
 		convenios_transferencia.bbl \
 		workshops.bbl \
+		companies.bbl \
+		organizations.bbl \
 		ResearcherID_URL.tex \
 		ORCID_URL.tex \
 		Scholar_URL.tex \
