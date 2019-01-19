@@ -73,7 +73,7 @@ FUNCTION {organization}
 }
 
 % We use entry type `misc' for an unknown type; BibTeX gives a warning.
-FUNCTION {default.type} { contract }
+FUNCTION {default.type} { organization }
 
 % Now we read in the .BIB entries.
 READ

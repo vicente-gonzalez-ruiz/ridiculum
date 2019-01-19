@@ -65,7 +65,7 @@ FUNCTION {company}
   CEO write$
   ".\newline " write$
 
-  "\emph{Stock:} " write$
+  "\emph{Foundation stock:} " write$
   stock write$
   ".\newline " write$
 
@@ -79,7 +79,7 @@ FUNCTION {company}
 }
 
 % We use entry type `misc' for an unknown type; BibTeX gives a warning.
-FUNCTION {default.type} { contract }
+FUNCTION {default.type} { company }
 
 % Now we read in the .BIB entries.
 READ
