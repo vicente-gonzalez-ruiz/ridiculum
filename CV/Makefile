@@ -1,3 +1,11 @@
+default:	main.pdf
+
+all:		default
+
+main.pdf:	*.tex \
+		$(HOME)/home/personal_data \
+		$(HOME)/home/vruiz.bib \
+
 proyectos.bbl:	../proyectos.tex ../proyectos.bib proyectos.bst
 	pdflatex proyectos; bibtex proyectos
 

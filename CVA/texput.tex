@@ -1,4 +1,4 @@
-% Curriculum Vitae Abreviado
+% Curriculum Vitae AbreviadoA
 % Modelo propuesto por el Ministerio de Economía y Competitividad
 
 \documentclass[a4paper]{article}
@@ -6,6 +6,10 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish,activeacute]{babel}
 \usepackage{hyperref}
+
+\usepackage{catchfile}
+\CatchFileDef\ResearcherID{ResearcherID.tex}{\endlinechar=-1}
+\CatchFileDef\GoogleUser{Google_user.tex}{\endlinechar=-1}
 
 \textwidth=1.4\textwidth
 \textheight=1.1\textheight
@@ -34,7 +38,6 @@
 %\pagestyle{empty} % Elimina las cabeceras
 \maketitle
 
-
 \section{Datos personales}
 
 \begin{tabular}{ll}
@@ -44,7 +47,6 @@
   Researcher ID: & \input{ResearcherID} \\
   Código Orcid: & \input{ORCID}
 \end{tabular}
-
 
 \subsection{Situación profesional actual}
 
@@ -66,7 +68,7 @@
   Licenciatura/Grado/Doctorado & Universidad & Año \\
   \hline
   \input{doctor_en} & \input{doctorado_por} & \input{doctor_anho} \\
-  \input{licenciado_en} & \input{licenciado_port} & \input{licenciado_anho} \\
+  \input{licenciado_en} & \input{licenciado_por} & \input{licenciado_anho} \\
   \input{diplomado_en} & \input{diplomado_por} & \input{diplomado_anho}
 \end{tabular}
 
@@ -78,8 +80,8 @@
 \item Artículos en revistas incluídas en el JCR: \input{num_articulos_JCR}
 \item Libros: \input{num_libros}
 \item Capítulos de libro: \input{num_capitulos_libro}
-\item \href{http://www.researcherid.com/rid/\input{ResearcherID}{Información en ResearcherID}:
-\item \href{https://scholar.google.es/citations?hl=es&user=\input{Google_user}}{Información en Google Académico}:
+\item \href{http://www.researcherid.com/rid/\ResearcherID}{Información en ResearcherID}.
+\item \href{https://scholar.google.es/citations?hl=es&user=\GoogleUser}{Información en Google Académico}.
 \end{enumerate}
 
 \section{Resumen libre del currículum}
