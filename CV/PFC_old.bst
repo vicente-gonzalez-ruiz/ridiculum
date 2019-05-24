@@ -2,20 +2,20 @@
 
 ENTRY
   { titulo
-%	    T√≠tulo del PFC.
+%	    TÌtulo del PFC.
     modalidad
-%	    Modalidad del proyecto: "Trabajo monogr√°fico/trabajo t√©cnico".
+%	    Modalidad del proyecto: "Trabajo monogr·fico/trabajo tÈcnico".
     descripcion
-%	    R√°pida del proyecto.
+%	    R·pida del proyecto.
     titulacion
-%	    Titulaci√≥n qur cursa el alumno.
+%	    TitulaciÛn qur cursa el alumno.
     alumno
 %	    Nombre del alumno.
     calificacion
 %	    Obtenida.
     fecha
-%           De finalizaci√≥n.
-    directores
+%           De finalizaciÛn.
+    director
 %	    Del proyecto.
     observaciones
   }
@@ -51,26 +51,32 @@ FUNCTION {fin.entry}
 
 FUNCTION {PFC}
 { output.bibitem
-  alumno write$
-  ". " write$
-  "\emph{" write$
+  "\begin{description}" write$
+  "\item[T\'{\i}tulo:] " write$
   titulo write$
-  "}" write$
-  ". " write$
+  "\item[Modalidad:] " write$
+  modalidad write$
+  "\item[Descripci\'on:] " write$
+  descripcion write$
+  "\item[Titulaci\'on:] " write$
   titulacion write$
-  ". " write$
-  directores write$
-  ". " write$
+  "\item[Alumno:] " write$
+  alumno write$
+  "\item[Calificaci\'on:] " write$
+  calificacion write$
+  "\item[Fecha de finalizaci\'on:] " write$
   fecha write$
-  ". " write$
-%  observaciones empty$
-%    {
-%    }
-%    {
-%       "\textbf{Obsrvaciones:} " write$
-%       observaciones write$
-%    }
-%  if$
+  "\item[Director/es:] " write$
+  director write$
+  observaciones empty$
+    {
+    }
+    {
+       "\item[Obsrvaciones:] " write$
+       observaciones write$
+    }
+  if$
+  "\end{description}" write$
   fin.entry
 }
 
