@@ -3,8 +3,27 @@ default:	main.pdf
 all:		default
 
 main.pdf:	*.tex \
-		$(HOME)/home/personal_data \
+		$(HOME)/home/personal_data/*.tex \
 		$(HOME)/home/vruiz.bib \
+		PFC.bbl \
+		agreements.bbl \
+		articles.bbl \
+		books.bbl \
+		companies.bbl\
+		contracts.bbl \
+		courses.bbl \
+		inbooks.bbl \
+		inproceedings.bbl \
+		mi-tesis.tex \
+		organizations.bbl \
+		phdthesis.bbl \
+		projects.bbl \
+		subjects.bbl \
+		transfer_projects.bbl \
+		workshops.bbl
+
+PFC.bbl:	../PFC.tex ../PFC.bib PFC.bst
+	pdflatex PFC; bibtex PFC
 
 proyectos.bbl:	../proyectos.tex ../proyectos.bib proyectos.bst
 	pdflatex proyectos; bibtex proyectos
@@ -20,9 +39,6 @@ congresos.bbl:	../congresos.tex ../../grupo_bib/vruiz.bib articulos.bst
 
 contratos.bbl:	../contratos.tex ../contratos.bib contratos.bst
 	pdflatex contratos; bibtex contratos
-
-PFC.bbl:	../PFC.tex ../PFC.bib PFC.bst
-	pdflatex PFC; bibtex PFC
 
 cursos.bbl:	../cursos.tex ../cursos.bib cursos.bst
 	pdflatex cursos; bibtex cursos
