@@ -5,7 +5,7 @@ all:		default
 main.pdf:	*.tex \
 		$(HOME)/home/personal_data/*.tex \
 		$(HOME)/home/vruiz.bib \
-		PFC.bbl \
+		PFCs.bbl \
 		agreements.bbl \
 		articles.bbl \
 		books.bbl \
@@ -22,19 +22,19 @@ main.pdf:	*.tex \
 		transfer_projects.bbl \
 		workshops.bbl
 
-PFC.bbl:	../PFC.tex ~/home/vruiz.bib PFC.bst
+PFCs.bbl:	PFCs.tex PFCs.bst ../PFCs.tex ~/home/vruiz.bib
 
-agreements.bbl:	../agreements.tex ~/home/vruiz.bib contract.bst
+agreements.bbl:	agreements.tex contracts.bst ../agreements.tex ~/home/vruiz.bib
 
-articles.bbl:	../articles.tex ~/home/vruiz.bib article.bst
+articles.bbl:	articles.tex articles.bst ../articles.tex ~/home/vruiz.bib
 
-books.bbl:	../books.tex ~/home/vruiz.bib book.bst
+books.bbl:	books.tex books.bst ../books.tex ~/home/vruiz.bib
 
-companies.bbl:	../companies.tex ~/home/vruiz.bib company.bst
+companies.bbl:	companies.tex companies.bst ../companies.tex ~/home/vruiz.bib
 
-contracts.bbl:	../contracts.tex ~/home/vruiz.bib contract.bst
+contracts.bbl:	contracts.tex contracts.bst ../contracts.tex ~/home/vruiz.bib
 
-courses.bbl:	../courses.tex ~/home/vruiz.bib course.bst
+courses.bbl:	courses.tex courses.bst ../courses.tex ~/home/vruiz.bib
 
 inbooks.bbl:	../inbooks.tex ~/home/vruiz.bib inbook.bst
 
