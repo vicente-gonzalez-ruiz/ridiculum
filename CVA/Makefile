@@ -1,18 +1,28 @@
-texput.pdf:	texput.tex
-	(export TEXINPUTS=${TEXINPUTS}; pdflatex texput)
-	(export TEXINPUTS=${TEXINPUTS}; pdflatex texput)
+default:	main.pdf
 
-pdf:	texput.pdf
+all:		default
 
-all:	pdf
+main.pdf:	*.tex \
+		$(HOME)/home/personal_data/*.tex \
+		$(HOME)/home/vruiz.bib \
+		PFCs.bbl
+
+PFCs.bbl:	PFCs.tex PFCs.bst ../PFCs.tex ~/home/vruiz.bib
 
 clean:
-	rm -f *.out *.aux *.bbl *.blg *.log texput.pdf
+	rm *.bbl *.aux *.pdf *.log *.blg *.out
 
-objetives:
-	@echo texput.pdf
+%.pdf:	%.tex
+	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
+	@while ( grep "Rerun to get cross-references" 		\
+                        $*.log > /dev/null ); do		\
+                echo '** Re-running LaTeX **';			\
+                (export TEXINPUTS=${TEXINPUTS}; pdflatex --interaction errorstopmode $*);	\
+        done
 
-info:	objetives
+%.bbl:	%.tex
+	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
+	(export BIBINPUTS=${BIBINPUTS}; bibtex $*)
 
 TEXINPUTS += :$(HOME)/home/personal_data/
-
+BIBINPUTS += :$(HOME)/home/

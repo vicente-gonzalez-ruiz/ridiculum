@@ -22,7 +22,7 @@ main.pdf:	*.tex \
 		transfer_projects.bbl \
 		workshops.bbl
 
-PFCs.bbl:	PFCs.tex PFCs.bst ../PFCs.tex ~/home/vruiz.bib
+PFCs.bbl:	PFCs.tex PFCs.bst ~/home/vruiz.bib
 
 agreements.bbl:	agreements.tex contracts.bst ../agreements.tex ~/home/vruiz.bib
 
