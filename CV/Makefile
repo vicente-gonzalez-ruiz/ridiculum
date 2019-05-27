@@ -14,7 +14,7 @@ main.pdf:	*.tex \
 		courses.bbl \
 		inbooks.bbl \
 		inproceedings.bbl \
-		mi-tesis.tex \
+		../mi-tesis.tex \
 		organizations.bbl \
 		phdthesis.bbl \
 		projects.bbl \
@@ -22,55 +22,45 @@ main.pdf:	*.tex \
 		transfer_projects.bbl \
 		workshops.bbl
 
-PFC.bbl:	../PFC.tex ../PFC.bib PFC.bst
-	pdflatex PFC; bibtex PFC
+PFC.bbl:	../PFC.tex ~/home/vruiz.bib PFC.bst
 
-agreements.bbl:	../agreements.tex ../agreements.bib agreements.bst
-	pdflatex agreements; bibtex agreements
+agreements.bbl:	../agreements.tex ~/home/vruiz.bib contract.bst
 
-articles.bbl:	../articles.tex ../../grupo_bib/vruiz.bib ../../grupo_bib/igarcia.bib articulos.bst
-	pdflatex articles; bibtex articles
+articles.bbl:	../articles.tex ~/home/vruiz.bib article.bst
 
-books.bbl:	../books.tex ../../grupo_bib/vruiz.bib articulos.bst
-	pdflatex books; bibtex books
+books.bbl:	../books.tex ~/home/vruiz.bib book.bst
 
-companies.bbl:	../companies.tex ../companies.bib companies.bst
-	pdflatex companies; bibtex companies
+companies.bbl:	../companies.tex ~/home/vruiz.bib company.bst
 
-courses.bbl:	../courses.tex ../courses.bib courses.bst
-	pdflatex courses; bibtex courses
+contracts.bbl:	../contracts.tex ~/home/vruiz.bib contract.bst
 
-inbooks.bbl:	../inbooks.tex ../inbooks.bib inbooks.bst
-	pdflatex inbooks; bibtex inbooks
+courses.bbl:	../courses.tex ~/home/vruiz.bib course.bst
 
-inproceedings.bbl:	../inproceedings.tex ../../grupo_bib/vruiz.bib articulos.bst
-	pdflatex inproceedings; bibtex inproceedings
+inbooks.bbl:	../inbooks.tex ~/home/vruiz.bib inbook.bst
 
-phdthesis.bbl:	../phdthesis.tex ../phdthesis.bib phdthesis.bst
-	pdflatex phdthesis; bibtex phdthesis
+inproceedings.bbl:	../inproceedings.tex ~/home/vruiz.bib inproceeding.bst
 
-projects.bbl:	../projects.tex ../projects.bib projects.bst
-	pdflatex projects; bibtex projects
+organizations.bbl:	../organizations.tex ~/home/vruiz.bib organization.bst
 
-subjects.bbl:	../subjects.tex ../subjects.bib subjects.bst
-	pdflatex subjects; bibtex subjects
+phdthesis.bbl:	../phdthesis.tex ~/home/vruiz.bib phdthesis.bst
 
-transfer_projects.bbl:	../transfer_projects.tex ../transfer_projects.bib transfer_projects.bst
-	pdflatex transfer_projects; bibtex transfer_projects
+projects.bbl:	../projects.tex ~/home/vruiz.bib project.bst
 
-workshops.bbl:	../workshops.tex ../workshops.bib workshops.bst
-	pdflatex workshops; bibtex workshops
+subjects.bbl:	../subjects.tex ~/home/vruiz.bib subject.bst
 
-objetives = transfer_projects.bbl articles.bbl books.bbl inproceedings.bbl phdthesis.bbl PFC.bbl courses.bbl
+transfer_projects.bbl:	../transfer_projects.tex ~/home/vruiz.bib project.bst
 
-texput.pdf:	$(objetives) texput.tex ../*.tex
-	pdflatex texput
-	pdflatex texput
-
-all:	  texput.pdf
+workshops.bbl:	../workshops.tex ~/home/vruiz.bib workshop.bst
 
 clean:
 	rm *.bbl *.aux *.pdf *.log *.blg *.out
 
-info:
-	@echo $(objetives)
+%.pdf:	%.tex
+	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
+
+%.bbl:	%.tex
+	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
+	(export BIBINPUTS=${BIBINPUTS}; bibtex $*)
+
+TEXINPUTS += :$(HOME)/home/personal_data/
+BIBINPUTS += :$(HOME)/home/

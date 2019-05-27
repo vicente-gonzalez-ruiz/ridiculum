@@ -10,11 +10,18 @@
 \voffset    = -2 cm	% Vertical
 
 \usepackage[english,spanish,activeacute]{babel}
-\usepackage[latin1]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{epsfig}
 %\usepackage{html}
 \usepackage{hyperref}
+
+\usepackage{catchfile}
+\CatchFileDef\ResearcherID{ResearcherID.tex}{\endlinechar=-1}
+\CatchFileDef\GoogleUser{Google_user.tex}{\endlinechar=-1}
+
 \usepackage{comment}
 
 \begin{document}
@@ -34,13 +41,13 @@
 \vspace{1cm}
 {\huge\bf \input{nombre}\input{apellidos}}\\
 
-{\huge\bf Curr韈ulum vitae}\\
+{\huge\bf Curr铆culum vitae}\\
 
 {\huge\bf \today}\\
 
 \bigskip
 \medskip
-{\Large \bf N鷐ero de hojas que contiene: \pageref{end} (incluida 閟ta)} \\
+{\Large \bf N煤mero de hojas que contiene: \pageref{end} (incluida 茅sta)} \\
 
 %------------------------------------------------
 
@@ -48,36 +55,53 @@
 
 
 
-%\centerline{ \Huge \bf Curr韈ulum vitae}
+%\centerline{ \Huge \bf Curr铆culum vitae}
 %\date{}
 %\maketitle
 
 \section*{Datos Personales}
 \begin{tabular}{l}
-APELLIDOS: \input{apellidos} \\
-NOMBRE: \input{nombre} SEXO: \input{sexo}  \\
-FECHA DE NACIMIENTO: \input{fecha_nacimiento}  \\
-DIRECCI覰: \input{direccion} \\
-TELEFONO: \input{telefono} \\
-ESPECIALIZACI覰 (C覦IGOS UNESCO): \input{cods_UNESCO}
+  APELLIDOS: \input{apellidos} \\
+  NOMBRE: \input{nombre} SEXO: \input{sexo}  \\
+  FECHA DE NACIMIENTO: \input{fecha_nacimiento}  \\
+  DIRECCI脫N: \input{direccion} \\
+  TELEFONO: \input{telefono} \\
+  ESPECIALIZACI脫N (C脫DIGOS UNESCO): \input{cods_UNESCO} \\
+  Researcher ID: \input{ResearcherID} \\
+  C贸digo Orcid: \input{ORCID}
 \end{tabular}
 
-\section*{Formaci髇 Acad閙ica}
-\input{../formacion_academica}
+\section*{Formaci贸n Acad茅mica}
+\begin{tabular}{lll}
+  Licenciatura/Grado/Doctorado & Universidad & A帽o \\
+  \hline
+  \input{doctor_en} & \input{doctorado_por} & \input{doctor_anho} \\
+  \input{licenciado_en} & \input{licenciado_por} & \input{licenciado_anho} \\
+  \input{diplomado_en} & \input{diplomado_por} & \input{diplomado_anho}
+\end{tabular}
 
-\section*{Situaci髇 Profesional}
-\input{../situacion_profesional}
+\section*{Situaci贸n Profesional}
+\begin{tabular}{ll}
+  Organismo: & \input{organismo} \\
+  Dpto./Centro & \input{departamento} \\
+  Direcci贸n: & \input{direccion} \\
+  Tel茅fono: & \input{telefono} \\
+  Correo electr贸nico: & \input{email} \\
+  Categor铆a profesional: & \input{categoria} \\
+  Fecha inicio: & \input{inicio} \\
+  Espec. c贸d. UNESCO: & \input{cods_UNESCO} \\
+  Palabras clave: & \input{palabras_clave}
+\end{tabular}
 
-\section*{Actividades Car醕ter Cient韋ico o Profesional}
-\resizebox{\textwidth}{!}{\input{../actividades_anteriores}}
+\section*{Actividades Car谩cter Cient铆fico o Profesional}
+\resizebox{\textwidth}{!}{\input{actividades_anteriores}}
 
-\section*{Idiomas de Inter閟 Cient韋ico}
+\section*{Idiomas de Inter茅s Cient铆fico}
 %(R=Regular, B=Bien, C=Correctamente)
 \begin{tabular}{llll}
 IDIOMA  & HABLA  & LEE           & ESCRIBE \\
 Ingles  & Bien   & Correctamente & Bien
 \end{tabular}
-
 
 \newpage
 
@@ -86,21 +110,21 @@ Ingles  & Bien   & Correctamente & Bien
 % Usuario INV032467
 % Contraseqa: CCJJKC
 
-\renewcommand{\refname}{Participaci髇 en Proyectos de Investigaci髇 Financiados}
-\input{proyectos.bbl}
+\renewcommand{\refname}{Participaci贸n en Proyectos de Investigaci贸n Financiados}
+\input{projects.bbl}
 
-\renewcommand{\refname}{Art韈ulos Publicados en Revistas}
-\input{revistas.bbl}
+\renewcommand{\refname}{Art铆culos Publicados en Revistas}
+\input{articles.bbl}
 
-\renewcommand{\refname}{Libros y Cap韙ulos de Libros Publicados}
-\input{libros.bbl}
+\renewcommand{\refname}{Libros y Cap铆tulos de Libros Publicados}
+\input{books.bbl}
 
-\renewcommand{\refname}{Art韈ulos Publicados en Congresos}
-\input{congresos.bbl}
+\renewcommand{\refname}{Art铆culos Publicados en Congresos}
+\input{inproceedings.bbl}
 
-\renewcommand{\refname}{Participaci髇 en Contratos de Investigaci髇
+\renewcommand{\refname}{Participaci贸n en Contratos de Investigaci贸n
   con Empresas y/o Administraciones}
-\input{contratos.bbl}
+\input{contracts.bbl}
 
 \begin{comment}
 \section*{Patentes y Modelos de Utilidad}
@@ -116,7 +140,7 @@ Ingles  & Bien   & Correctamente & Bien
 \addcontentsline{toc}{chapter}{Tesis Doctorales Dirigidas}
 \end{comment}
 
-\section*{Otros M閞itos}
+\section*{Otros M茅ritos}
 \section*{* Experiencia Docente Universitaria}
 \input{../experiencia_docente}
 
