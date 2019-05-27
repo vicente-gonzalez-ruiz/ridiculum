@@ -132,37 +132,38 @@ Workshops (con empresas): & 1 (ver \hyperref[sec:workshops]{Workshops})
 %\noindent (Máximo 3500 caracteres, incluyendo espacios en blanco)
 %\input{resumen_libre}
 
-\renewcommand{\refname}{}
+%\renewcommand{\refname}{}
 
-\section*{Organizaciones}
-\label{sec:organizations}
-\vspace{-5ex}
+\addtocounter{section}{1}
+\newcommand{\secname}{Organizaciones}
+\renewcommand{\refname}{\thesection.~~ \secname}
 \input{organizations.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
-\section*{Contratos}
-\label{sec:contratos}
-\vspace{-5ex}
-\input{contratos_transferencia.bbl}
+\addtocounter{section}{1}
+\renewcommand{\secname}{Contratos}
+\input{contracts.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
-\section*{Convenios}
-\label{sec:convenios}
-\vspace{-5ex}
-\input{convenios_transferencia.bbl}
+\addtocounter{section}{1}
+\renewcommand{\secname}{Convenios}
+\input{agreements.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
-\section*{Creación de empresas}
-\label{sec:empresas}
-\vspace{-5ex}
+\addtocounter{section}{1}
+\renewcommand{\secname}{Creación de Empresas}
 \input{companies.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
-\section*{Proyectos}
-\label{sec:proyectos}
-\vspace{-5ex}
-\input{proyectos_transferencia.bbl}
+\addtocounter{section}{1}
+\renewcommand{\secname}{Proyectos}
+\input{transfer_projects.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
-\section*{Workshops}
-\label{sec:workshops}
-\vspace{-5ex}
+\addtocounter{section}{1}
+\renewcommand{\secname}{Workshops}
 \input{workshops.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 %\subsection{Patentes}
 

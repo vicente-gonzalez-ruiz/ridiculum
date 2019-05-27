@@ -16,14 +16,34 @@
 \usepackage{graphicx}
 \usepackage{epsfig}
 %\usepackage{html}
-\usepackage[colorlinks=true]{hyperref}
+\usepackage{hyperref}
 \usepackage{eurosym}
+\usepackage{color}
 
 \usepackage{catchfile}
 \CatchFileDef\ResearcherID{ResearcherID.tex}{\endlinechar=-1}
 \CatchFileDef\GoogleUser{Google_user.tex}{\endlinechar=-1}
 
 \usepackage{comment}
+
+\definecolor{dark-red}{rgb}{0.4,0.15,0.15}
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\definecolor{medium-blue}{rgb}{0,0,0.5}
+
+\hypersetup{
+  pdfauthor = {González Ruiz, Vicente},
+  pdftitle = {CV},
+  pdfsubject = {I+D+i},
+  %pdfkeywords = {Keyword1, Keyword2, ...},
+  pdfcreator = {LaTeX with hyperref package},
+  pdfproducer = {pdflatex},
+  colorlinks,
+  pdfborder={0 0 0},
+  linkcolor={dark-red},
+  citecolor={dark-blue}, 
+  urlcolor={medium-blue},
+  linktocpage
+}
 
 \begin{document}
 
