@@ -17,6 +17,7 @@
 \usepackage{epsfig}
 %\usepackage{html}
 \usepackage{hyperref}
+\usepackage{eurosym}
 
 \usepackage{catchfile}
 \CatchFileDef\ResearcherID{ResearcherID.tex}{\endlinechar=-1}
@@ -132,7 +133,7 @@ Ingles  & Bien   & Correctamente & Bien
 \end{comment}
 
 \section*{Estancias en Centros Extranjeros}
-\input{../estancias_en_centros_extranjeros}
+\input{estancias_en_centros_extranjeros}
 
 \begin{comment}
 \section*{Tesis Doctorales Dirigidas}
@@ -140,15 +141,47 @@ Ingles  & Bien   & Correctamente & Bien
 \addcontentsline{toc}{chapter}{Tesis Doctorales Dirigidas}
 \end{comment}
 
-\section*{Otros Méritos}
-\section*{* Experiencia Docente Universitaria}
-\input{../experiencia_docente}
+%\section*{Otros Méritos}
+\renewcommand{\refname}{Experiencia Docente Universitaria}
+\input{subjects.bbl}
 
-\renewcommand{\refname}{* Proyectos Fin de Carrera Dirigidos}
-\input{PFC.bbl}
+\renewcommand{\refname}{Proyectos Fin de Carrera Dirigidos}
+\input{PFCs.bbl}
 
-\renewcommand{\refname}{* Cursos Impartidos}
-\input{cursos.bbl}
+\renewcommand{\refname}{Cursos Impartidos}
+\input{courses.bbl}
+
+\renewcommand{\refname}{}
+
+\section*{Organizaciones}
+\label{sec:organizations}
+\vspace{-5ex}
+\input{organizations.bbl}
+
+\section*{Contratos}
+\label{sec:contratos}
+\vspace{-5ex}
+\input{contracts.bbl}
+
+\section*{Convenios}
+\label{sec:convenios}
+\vspace{-5ex}
+\input{agreements.bbl}
+
+\section*{Creación de empresas}
+\label{sec:empresas}
+\vspace{-5ex}
+\input{companies.bbl}
+
+\section*{Proyectos de transferencia}
+\label{sec:proyectos}
+\vspace{-5ex}
+\input{transfer_projects.bbl}
+
+\section*{Workshops}
+\label{sec:workshops}
+\vspace{-5ex}
+\input{workshops.bbl}
 
 \label{end}
 

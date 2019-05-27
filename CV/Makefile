@@ -36,27 +36,32 @@ contracts.bbl:	contracts.tex contracts.bst ../contracts.tex ~/home/vruiz.bib
 
 courses.bbl:	courses.tex courses.bst ../courses.tex ~/home/vruiz.bib
 
-inbooks.bbl:	../inbooks.tex ~/home/vruiz.bib inbook.bst
+inbooks.bbl:	inbooks.tex inbooks.bst ../inbooks.tex ~/home/vruiz.bib
 
-inproceedings.bbl:	../inproceedings.tex ~/home/vruiz.bib inproceeding.bst
+inproceedings.bbl:	 inproceedings.tex inproceedings.bst ../inproceedings.tex ~/home/vruiz.bib
 
-organizations.bbl:	../organizations.tex ~/home/vruiz.bib organization.bst
+organizations.bbl:	 organizations.tex organizations.bst ../organizations.tex ~/home/vruiz.bib
 
-phdthesis.bbl:	../phdthesis.tex ~/home/vruiz.bib phdthesis.bst
+phdthesis.bbl:	phdthesis.tex phdthesis.bst ../phdthesis.tex ~/home/vruiz.bib
 
-projects.bbl:	../projects.tex ~/home/vruiz.bib project.bst
+projects.bbl:	projects.tex projects.bst ../projects.tex ~/home/vruiz.bib
 
-subjects.bbl:	../subjects.tex ~/home/vruiz.bib subject.bst
+subjects.bbl:	subjects.tex subjects.bst ../subjects.tex ~/home/vruiz.bib
 
-transfer_projects.bbl:	../transfer_projects.tex ~/home/vruiz.bib project.bst
+transfer_projects.bbl:	transfer_projects.tex projects.bst ../transfer_projects.tex ~/home/vruiz.bib
 
-workshops.bbl:	../workshops.tex ~/home/vruiz.bib workshop.bst
+workshops.bbl:	 workshops.tex workshops.bst ../workshops.tex ~/home/vruiz.bib
 
 clean:
 	rm *.bbl *.aux *.pdf *.log *.blg *.out
 
 %.pdf:	%.tex
 	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
+	@while ( grep "Rerun to get cross-references" 		\
+                        $*.log > /dev/null ); do		\
+                echo '** Re-running LaTeX **';			\
+                (export TEXINPUTS=${TEXINPUTS}; pdflatex --interaction errorstopmode $*);	\
+        done
 
 %.bbl:	%.tex
 	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
