@@ -57,6 +57,7 @@ clean:
 
 %.pdf:	%.tex
 	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
+	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
 	@while ( grep "Rerun to get cross-references" 		\
                         $*.log > /dev/null ); do		\
                 echo '** Re-running LaTeX **';			\
