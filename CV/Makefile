@@ -1,34 +1,66 @@
-proyectos.bbl:	../proyectos.tex ../proyectos.bib proyectos.bst
-	pdflatex proyectos; bibtex proyectos
+default:	main.pdf
 
-revistas.bbl:	../revistas.tex ../../grupo_bib/vruiz.bib ../../grupo_bib/igarcia.bib articulos.bst
-	pdflatex revistas; bibtex revistas
+all:		default
 
-libros.bbl:	../libros.tex ../../grupo_bib/vruiz.bib articulos.bst
-	pdflatex libros; bibtex libros
+main.pdf:	*.tex \
+		$(HOME)/home/personal_data/*.tex \
+		$(HOME)/home/vruiz.bib \
+		PFCs.bbl \
+		agreements.bbl \
+		articles.bbl \
+		books.bbl \
+		companies.bbl\
+		contracts.bbl \
+		courses.bbl \
+		inbooks.bbl \
+		inproceedings.bbl \
+		../mi-tesis.tex \
+		organizations.bbl \
+		phdthesis.bbl \
+		projects.bbl \
+		subjects.bbl \
+		transfer_projects.bbl \
+		workshops.bbl
 
-congresos.bbl:	../congresos.tex ../../grupo_bib/vruiz.bib articulos.bst
-	pdflatex congresos; bibtex congresos
+PFCs.bbl:	PFCs.tex PFCs.bst ../PFCs.tex ~/home/vruiz.bib
 
-contratos.bbl:	../contratos.tex ../contratos.bib contratos.bst
-	pdflatex contratos; bibtex contratos
+agreements.bbl:	agreements.tex contracts.bst ../agreements.tex ~/home/vruiz.bib
 
-PFC.bbl:	../PFC.tex ../PFC.bib PFC.bst
-	pdflatex PFC; bibtex PFC
+articles.bbl:	articles.tex articles.bst ../articles.tex ~/home/vruiz.bib
 
-cursos.bbl:	../cursos.tex ../cursos.bib cursos.bst
-	pdflatex cursos; bibtex cursos
+books.bbl:	books.tex books.bst ../books.tex ~/home/vruiz.bib
 
-objetives = proyectos.bbl revistas.bbl libros.bbl congresos.bbl contratos.bbl PFC.bbl cursos.bbl
+companies.bbl:	companies.tex companies.bst ../companies.tex ~/home/vruiz.bib
 
-texput.pdf:	$(objetives) texput.tex ../*.tex
-	pdflatex texput
-	pdflatex texput
+contracts.bbl:	contracts.tex contracts.bst ../contracts.tex ~/home/vruiz.bib
 
-all:	  texput.pdf
+courses.bbl:	courses.tex courses.bst ../courses.tex ~/home/vruiz.bib
+
+inbooks.bbl:	../inbooks.tex ~/home/vruiz.bib inbook.bst
+
+inproceedings.bbl:	../inproceedings.tex ~/home/vruiz.bib inproceeding.bst
+
+organizations.bbl:	../organizations.tex ~/home/vruiz.bib organization.bst
+
+phdthesis.bbl:	../phdthesis.tex ~/home/vruiz.bib phdthesis.bst
+
+projects.bbl:	../projects.tex ~/home/vruiz.bib project.bst
+
+subjects.bbl:	../subjects.tex ~/home/vruiz.bib subject.bst
+
+transfer_projects.bbl:	../transfer_projects.tex ~/home/vruiz.bib project.bst
+
+workshops.bbl:	../workshops.tex ~/home/vruiz.bib workshop.bst
 
 clean:
 	rm *.bbl *.aux *.pdf *.log *.blg *.out
 
-info:
-	@echo $(objetives)
+%.pdf:	%.tex
+	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
+
+%.bbl:	%.tex
+	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
+	(export BIBINPUTS=${BIBINPUTS}; bibtex $*)
+
+TEXINPUTS += :$(HOME)/home/personal_data/
+BIBINPUTS += :$(HOME)/home/

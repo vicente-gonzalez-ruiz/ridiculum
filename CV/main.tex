@@ -1,0 +1,157 @@
+%
+% CV normalizado
+%
+
+\documentclass[9pt]{article}
+%\documentclass[a4paper]{report}
+\textheight = 23 cm	% Altura
+\textwidth  = 16 cm	% Anchura
+\hoffset    = -2 cm	% Horizontal
+\voffset    = -2 cm	% Vertical
+
+\usepackage[english,spanish,activeacute]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{epsfig}
+%\usepackage{html}
+\usepackage{hyperref}
+
+\usepackage{catchfile}
+\CatchFileDef\ResearcherID{ResearcherID.tex}{\endlinechar=-1}
+\CatchFileDef\GoogleUser{Google_user.tex}{\endlinechar=-1}
+
+\usepackage{comment}
+
+\begin{document}
+
+%---------------- Comienzo Portada -----------------------
+
+
+%---------------- Fin Portada -----------------------
+
+\thispagestyle{empty}
+
+\mbox{ }
+
+\vspace{4cm}
+
+%\hrule
+\vspace{1cm}
+{\huge\bf \input{nombre}\input{apellidos}}\\
+
+{\huge\bf Currículum vitae}\\
+
+{\huge\bf \today}\\
+
+\bigskip
+\medskip
+{\Large \bf Número de hojas que contiene: \pageref{end} (incluida ésta)} \\
+
+%------------------------------------------------
+
+\newpage
+
+
+
+%\centerline{ \Huge \bf Currículum vitae}
+%\date{}
+%\maketitle
+
+\section*{Datos Personales}
+\begin{tabular}{l}
+  APELLIDOS: \input{apellidos} \\
+  NOMBRE: \input{nombre} SEXO: \input{sexo}  \\
+  FECHA DE NACIMIENTO: \input{fecha_nacimiento}  \\
+  DIRECCIÓN: \input{direccion} \\
+  TELEFONO: \input{telefono} \\
+  ESPECIALIZACIÓN (CÓDIGOS UNESCO): \input{cods_UNESCO} \\
+  Researcher ID: \input{ResearcherID} \\
+  Código Orcid: \input{ORCID}
+\end{tabular}
+
+\section*{Formación Académica}
+\begin{tabular}{lll}
+  Licenciatura/Grado/Doctorado & Universidad & Año \\
+  \hline
+  \input{doctor_en} & \input{doctorado_por} & \input{doctor_anho} \\
+  \input{licenciado_en} & \input{licenciado_por} & \input{licenciado_anho} \\
+  \input{diplomado_en} & \input{diplomado_por} & \input{diplomado_anho}
+\end{tabular}
+
+\section*{Situación Profesional}
+\begin{tabular}{ll}
+  Organismo: & \input{organismo} \\
+  Dpto./Centro & \input{departamento} \\
+  Dirección: & \input{direccion} \\
+  Teléfono: & \input{telefono} \\
+  Correo electrónico: & \input{email} \\
+  Categoría profesional: & \input{categoria} \\
+  Fecha inicio: & \input{inicio} \\
+  Espec. cód. UNESCO: & \input{cods_UNESCO} \\
+  Palabras clave: & \input{palabras_clave}
+\end{tabular}
+
+\section*{Actividades Carácter Científico o Profesional}
+\resizebox{\textwidth}{!}{\input{actividades_anteriores}}
+
+\section*{Idiomas de Interés Científico}
+%(R=Regular, B=Bien, C=Correctamente)
+\begin{tabular}{llll}
+IDIOMA  & HABLA  & LEE           & ESCRIBE \\
+Ingles  & Bien   & Correctamente & Bien
+\end{tabular}
+
+\newpage
+
+% Ver SICA:
+% http://www.grupos-pai.cica.es
+% Usuario INV032467
+% Contraseqa: CCJJKC
+
+\renewcommand{\refname}{Participación en Proyectos de Investigación Financiados}
+\input{projects.bbl}
+
+\renewcommand{\refname}{Artículos Publicados en Revistas}
+\input{articles.bbl}
+
+\renewcommand{\refname}{Libros y Capítulos de Libros Publicados}
+\input{books.bbl}
+
+\renewcommand{\refname}{Artículos Publicados en Congresos}
+\input{inproceedings.bbl}
+
+\renewcommand{\refname}{Participación en Contratos de Investigación
+  con Empresas y/o Administraciones}
+\input{contracts.bbl}
+
+\begin{comment}
+\section*{Patentes y Modelos de Utilidad}
+\input{patentes_y_modelos_de_utilidad}
+\end{comment}
+
+\section*{Estancias en Centros Extranjeros}
+\input{../estancias_en_centros_extranjeros}
+
+\begin{comment}
+\section*{Tesis Doctorales Dirigidas}
+\input{../tesis}
+\addcontentsline{toc}{chapter}{Tesis Doctorales Dirigidas}
+\end{comment}
+
+\section*{Otros Méritos}
+\section*{* Experiencia Docente Universitaria}
+\input{../experiencia_docente}
+
+\renewcommand{\refname}{* Proyectos Fin de Carrera Dirigidos}
+\input{PFC.bbl}
+
+\renewcommand{\refname}{* Cursos Impartidos}
+\input{cursos.bbl}
+
+\label{end}
+
+\end{document}
+
+
