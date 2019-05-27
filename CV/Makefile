@@ -25,25 +25,43 @@ main.pdf:	*.tex \
 PFC.bbl:	../PFC.tex ../PFC.bib PFC.bst
 	pdflatex PFC; bibtex PFC
 
-proyectos.bbl:	../proyectos.tex ../proyectos.bib proyectos.bst
-	pdflatex proyectos; bibtex proyectos
+agreements.bbl:	../agreements.tex ../agreements.bib agreements.bst
+	pdflatex agreements; bibtex agreements
 
-revistas.bbl:	../revistas.tex ../../grupo_bib/vruiz.bib ../../grupo_bib/igarcia.bib articulos.bst
-	pdflatex revistas; bibtex revistas
+articles.bbl:	../articles.tex ../../grupo_bib/vruiz.bib ../../grupo_bib/igarcia.bib articulos.bst
+	pdflatex articles; bibtex articles
 
-libros.bbl:	../libros.tex ../../grupo_bib/vruiz.bib articulos.bst
-	pdflatex libros; bibtex libros
+books.bbl:	../books.tex ../../grupo_bib/vruiz.bib articulos.bst
+	pdflatex books; bibtex books
 
-congresos.bbl:	../congresos.tex ../../grupo_bib/vruiz.bib articulos.bst
-	pdflatex congresos; bibtex congresos
+companies.bbl:	../companies.tex ../companies.bib companies.bst
+	pdflatex companies; bibtex companies
 
-contratos.bbl:	../contratos.tex ../contratos.bib contratos.bst
-	pdflatex contratos; bibtex contratos
+courses.bbl:	../courses.tex ../courses.bib courses.bst
+	pdflatex courses; bibtex courses
 
-cursos.bbl:	../cursos.tex ../cursos.bib cursos.bst
-	pdflatex cursos; bibtex cursos
+inbooks.bbl:	../inbooks.tex ../inbooks.bib inbooks.bst
+	pdflatex inbooks; bibtex inbooks
 
-objetives = proyectos.bbl revistas.bbl libros.bbl congresos.bbl contratos.bbl PFC.bbl cursos.bbl
+inproceedings.bbl:	../inproceedings.tex ../../grupo_bib/vruiz.bib articulos.bst
+	pdflatex inproceedings; bibtex inproceedings
+
+phdthesis.bbl:	../phdthesis.tex ../phdthesis.bib phdthesis.bst
+	pdflatex phdthesis; bibtex phdthesis
+
+projects.bbl:	../projects.tex ../projects.bib projects.bst
+	pdflatex projects; bibtex projects
+
+subjects.bbl:	../subjects.tex ../subjects.bib subjects.bst
+	pdflatex subjects; bibtex subjects
+
+transfer_projects.bbl:	../transfer_projects.tex ../transfer_projects.bib transfer_projects.bst
+	pdflatex transfer_projects; bibtex transfer_projects
+
+workshops.bbl:	../workshops.tex ../workshops.bib workshops.bst
+	pdflatex workshops; bibtex workshops
+
+objetives = transfer_projects.bbl articles.bbl books.bbl inproceedings.bbl phdthesis.bbl PFC.bbl courses.bbl
 
 texput.pdf:	$(objetives) texput.tex ../*.tex
 	pdflatex texput
