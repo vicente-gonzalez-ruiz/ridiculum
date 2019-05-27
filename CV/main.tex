@@ -68,7 +68,7 @@
 \section{Datos Personales}
 \begin{tabular}{l}
   APELLIDOS: \input{apellidos} \\
-  NOMBRE: \input{nombre} SEXO: \input{sexo}  \\
+  NOMBRE: \input{nombre} \\
   FECHA DE NACIMIENTO: \input{fecha_nacimiento}  \\
   DIRECCIÓN: \input{direccion} \\
   TELEFONO: \input{telefono} \\
@@ -118,40 +118,35 @@ Ingles  & Bien   & Correctamente & Bien
 
 \addtocounter{section}{1}
 \newcommand{\secname}{Participación en Proyectos de Investigación Financiados}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 \renewcommand{\refname}{\thesection.~~ \secname}
 \input{projects.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Artículos Publicados en Revistas}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{articles.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Libros Publicados}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{books.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Capítulos de Libros Publicados}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{inbooks.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Artículos Publicados en Congresos}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{inproceedings.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Participación en Contratos de Investigación
   con Empresas y/o Administraciones}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{contracts.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \begin{comment}
 \section*{Patentes y Modelos de Utilidad}
@@ -160,81 +155,65 @@ Ingles  & Bien   & Correctamente & Bien
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Estancias en Centros Extranjeros}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 \section*{\secname}
 \input{estancias_en_centros_extranjeros}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Tesis Doctorales Dirigidas}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{phdthesis.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 %\section*{Otros Méritos}
 \addtocounter{section}{1}
 \renewcommand{\secname}{Experiencia Docente Universitaria}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{subjects.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Proyectos Fin de Carrera Dirigidos}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{PFCs.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Cursos Impartidos}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{courses.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
-\renewcommand{\refname}{}
+%\renewcommand{\refname}{}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Organizaciones}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
-%\section*{Organizaciones}
-%\label{sec:organizations}
-%\vspace{-5ex}
 \input{organizations.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Contratos}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
-%\section*{Contratos}
-%\label{sec:contratos}
-%\vspace{-5ex}
 \input{contracts.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Convenios con Otras Organizaciones}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{agreements.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Creación de Empresas}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{companies.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 %\section*{Proyectos de transferencia}
 %\label{sec:proyectos}
 %\vspace{-5ex}
 \addtocounter{section}{1}
 \renewcommand{\secname}{Proyectos de Transferencia}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{transfer_projects.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \addtocounter{section}{1}
 \renewcommand{\secname}{Participación en Workshops}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
-\renewcommand{\refname}{\thesection.~~ \secname}
 \input{workshops.bbl}
+\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
 
 \label{end}
 
