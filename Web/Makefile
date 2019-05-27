@@ -1,29 +1,21 @@
 default:	index.html
 
-all:	index.html entries
-
-TEXINPUTS := ":.:..:$(HOME)/home/personal_data:"
-BIBINPUTS := "$(HOME)/home:"
-
-# Regla para generar los .bbl a partir de los .tex
-%.bbl:	../%.tex
-	(export TEXINPUTS=${TEXINPUTS}; latex $*)
-	(export BIBINPUTS=${BIBINPUTS}; bibtex $*)
+all:	default entries
 
 index.html:	*.tex \
 		../*.tex \
 		$(HOME)/home/personal_data \
 		$(HOME)/home/vruiz.bib \
-		Articles.bbl \
-		Asignaturas.bbl \
-		Books.bbl \
-		Contracts.bbl \
-		Cursos.bbl \
-		InBooks.bbl \
-		InProceedings.bbl \
-		PFC.bbl \
-		PhdThesis.bbl \
-		Projects.bbl \
+		articles.bbl \
+		subjects.bbl \
+		books.bbl \
+		contracts.bbl \
+		courses.bbl \
+		inbooks.bbl \
+		inproceedings.bbl \
+		PFCs.bbl \
+		phdthesis.bbl \
+		projects.bbl \
 		ResearcherID_URL.tex \
 		ORCID_URL.tex \
 		Scholar_URL.tex \
@@ -44,6 +36,11 @@ UAL_URL.tex:	$(HOME)/home/personal_data/UAL_user.tex
 
 GitHub_URL.tex:	$(HOME)/home/personal_data/GitHub_user.tex
 	(printf  '\url{https://github.com/'; cat $^; printf '}\n') > $@
+
+# Regla para generar los .bbl a partir de los .tex
+%.bbl:	../%.tex
+	(export TEXINPUTS=${TEXINPUTS}; latex $*)
+	(export BIBINPUTS=${BIBINPUTS}; bibtex $*)
 
 # Regla para generar los .html a partir de los .tex
 %.html: %.tex
@@ -67,3 +64,7 @@ publish:
 	scp index.html dali.hpca.ual.es:public_html/index.html
 	scp index.css dali.hpca.ual.es:public_html/index.css
 	scp *.bib dali.hpca.ual.es:public_html/papers
+
+TEXINPUTS := ":.:..:$(HOME)/home/personal_data:"
+BIBINPUTS := "$(HOME)/home:"
+

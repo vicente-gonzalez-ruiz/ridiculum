@@ -46,7 +46,7 @@ FUNCTION {fin.entry}
 
 FUNCTION {tesis}
 { output.bibitem
-  "\textbf{Título:} " write$
+  "\textbf{T\'{\i}tulo:} " write$
   title write$
   "\newline" write$
   "\textbf{Doctorando:} " write$
@@ -57,7 +57,7 @@ FUNCTION {tesis}
   " \textbf{Facultad/Escuela:} " write$
   faculty write$
   "\newline" write$
-  "\textbf{Año:} " write$
+  "\textbf{A\~no:} " write$
   year write$
   "\newline" write$
   "\textbf{Calificaci\'on:} " write$
