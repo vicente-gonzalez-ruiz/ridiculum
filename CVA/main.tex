@@ -24,13 +24,15 @@
 % Definición de las cabeceras
 %\cfoot[]{} % Elimina el número a pie de página
 
+\def\english{1}
+
+\ifx\english\undefined
 \title{Curriculum Vitae Abreviado}
-\author{
-  \begin{tabular}{ll}
-    \textbf{Nombre:} & \input{nombre} \\
-    \textbf{Apellidos::} & \input{apellidos}
-  \end{tabular}
-}
+\else
+\title{Short Curriculum Vitae}
+\fi
+
+\author{\input{nombre} \input{apellidos}}
 
 \begin{document}
 \def\normalfont{\sffamily}
@@ -38,8 +40,13 @@
 %\pagestyle{empty} % Elimina las cabeceras
 \maketitle
 
-\section{Datos personales}
+\ifx\english\undefined
+\section{Información personales}
+\else
+\section{Personal information}
+\fi
 
+\ifx\english\undefined
 \begin{tabular}{ll}
   Nombre y apellidos: & \input{nombre} \input{apellidos} \\
   DNI/NIE/pasaporte: & \input{DNI} \\
@@ -47,9 +54,25 @@
   Researcher ID: & \input{ResearcherID} \\
   Código Orcid: & \input{ORCID}
 \end{tabular}
+\else
+\begin{tabular}{ll}
+  Surname(s): & \input{apellidos} \\
+  Forename: & \input{nombre} \\
+  Social Security, Passport, ID number: & \input{DNI} \\
+  Sex: & Male \\
+  Age: & \input{edad} \\
+  Researcher ID: & \input{ResearcherID} \\
+  Código Orcid: & \input{ORCID}
+\end{tabular}
+\fi
 
+\ifx\english\undefined
 \subsection{Situación profesional actual}
+\else
+\subsection{Current position}
+\fi
 
+\ifx\english\undefined
 \begin{tabular}{ll}
   Organismo: & \input{organismo} \\
   Dpto./Centro & \input{departamento} \\
@@ -61,9 +84,27 @@
   Espec. cód. UNESCO: & \input{cods_UNESCO} \\
   Palabras clave: & \input{palabras_clave}
 \end{tabular}
+\else
+\begin{tabular}{ll}
+  Post / Proessional category: & \input{categoria} \\
+  UNESCO code(s): & \input{cods_UNESCO} \\
+  Key words: & \input{palabras_clave} \\
+  University/Institution: & \input{organismo} \\
+  Department/Centre & \input{departamento} \\
+  Full address: & \input{direccion} \\
+  Email address: & \input{email} \\
+  Phone number: & \input{telefono} \\
+  Start date: & \input{inicio} 
+\end{tabular}
+\fi
 
+\ifx\english\undefined
 \subsection{Formación académica}
+\else
+\subsection{Education}
+\fi
 
+\ifx\english\undefined
 \begin{tabular}{lll}
   Licenciatura/Grado/Doctorado & Universidad & Año \\
   \hline
@@ -71,9 +112,23 @@
   \input{licenciado_en} & \input{licenciado_por} & \input{licenciado_anho} \\
   \input{diplomado_en} & \input{diplomado_por} & \input{diplomado_anho}
 \end{tabular}
+\else
+\begin{tabular}{lll}
+  Year & University & Degree \\
+  \hline
+  \input{doctor_anho} & \input{doctorado_por} & \input{doctor_en} \\
+  \input{licenciado_anho} & \input{licenciado_por} & \input{licenciado_en} \\
+  \input{diplomado_anho} & \input{diplomado_por} & \input{diplomado_en}
+\end{tabular}
+\fi
 
+\ifx\english\undefined
 \subsection{Indicadores generales de calidad de la producción científica}
+\else
+\subsection{Quality Indicators in Scientific Production}
+\fi
 
+\ifx\english\undefined
 \begin{enumerate}
 \item Sexenios de investigación: \input{sexenios_anhos}
 \item Número de tesis dirigidas: \input{num_tesis_dirigidas}
@@ -83,26 +138,62 @@
 \item \href{http://www.researcherid.com/rid/\ResearcherID}{Información en ResearcherID}.
 \item \href{https://scholar.google.es/citations?hl=es&user=\GoogleUser}{Información en Google Académico}.
 \end{enumerate}
+\else
+\begin{tabular}{ll}
+Six-year research: & \input{sexenios_anhos} \\
+PhD thesis supervised: & \input{num_tesis_dirigidas} \\
+JCR journals: & \input{num_articulos_JCR} \\
+Books: & \input{num_libros} \\
+Chapter books: & \input{num_capitulos_libro} \\
+\href{http://www.researcherid.com/rid/\ResearcherID}{ResearcherID information}: & 20 publications, 80 citations, 4 h-index, 10 verified reviews.\\
+\href{https://scholar.google.es/citations?hl=es&user=\GoogleUser}{Google Scholar Information}: & 270 citations, 7 h-index (5 since 2014). 
+\end{tabular}
+\fi
 
+% (Máximo 3500 caracteres, incluyendo espacios en blanco)
+\ifx\english\undefined
 \section{Resumen libre del currículum}
-%\noindent (Máximo 3500 caracteres, incluyendo espacios en blanco)
+\else
+\section{Free summary of CV}
+\fi
 \input{resumen_libre}
-  
-\section{Méritos más relevantes}
-%\noindent (De los últimos 10 años)
 
+% (De los últimos 10 años)
+\ifx\english\undefined
+\section{Méritos más relevantes}
+\else
+\section{Relevant accomplishments}
+\fi
+
+\ifx\english\undefined
 \subsection{Publicaciones}
+\else
+\subsection{Publications}
+\fi
 \input{top_5_publicaciones}
 
+% (Máximo 7)
+\ifx\english\undefined
 \subsection{Proyectos I+D+i}
-%\noindent (Máximo 7)
+\else
+\subsection{Research projects and grants}
+\fi
 \input{top_7_proyectos}
 
+% (Máximo 7)
+\ifx\english\undefined
 \subsection{Contratos I+D+i}
-%\noindent (Máximo 7)
+\else
+\subsection{I+D+i contracts}
+\fi
 \input{top_7_contratos}
 
-%\subsection{Patentes}
+%\subsection{Patentes / Patents and other IPR}
+\ifx\english\undefined
+\subsection{Patentes y otros registros de la propiedad intelectual}
+\else
+\subsection{Patents and other IPR}
+\fi
 
 \addtocounter{section}{1}
 \newcommand{\secname}{Proyectos Fin de Carrera Dirigidos}
