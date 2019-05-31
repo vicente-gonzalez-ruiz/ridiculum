@@ -1,5 +1,6 @@
-% Curriculum Vitae AbreviadoA
+% Curriculum Vitae Abreviado
 % Modelo propuesto por el Ministerio de Economía y Competitividad
+% Max 4 pags
 
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
@@ -195,15 +196,28 @@ Chapter books: & \input{num_capitulos_libro} \\
 \subsection{Patents and other IPR}
 \fi
 
-\addtocounter{section}{1}
+\addtocounter{subsection}{1}
+\ifx\english\undefined
 \newcommand{\secname}{Proyectos Fin de Carrera Dirigidos}
+\else
+\newcommand{\secname}{Direction of works}
+\fi
+\renewcommand{\refname}{\large\thesubsection.~~~ \secname}
 \input{PFCs.bbl}
-\addcontentsline{toc}{section}{\protect\numberline{\thesection}\secname}
+\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}\secname}
 
+\ifx\english\undefined
 \subsection{Participación en tareas de evaluación}
+\else
+\subsection{Participation in evaluation tasks}
+\fi
 \input{evaluador}
 
+\ifx\english\undefined
 \subsection{Revisor de revistas}
+\else
+\subsection{Journal reviewer}
+\fi
 \input{revisor}
 
 \end{document}
