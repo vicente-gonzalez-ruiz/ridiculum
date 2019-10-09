@@ -10,7 +10,7 @@ main.pdf:	*.tex \
 PFCs.bbl:	../PFCs.tex PFCs.bst ../PFCs.tex ~/home/vruiz.bib
 
 clean:
-	rm *.bbl *.aux *.pdf *.log *.blg *.out
+	rm -f *.bbl *.aux *.pdf *.log *.blg *.out
 
 %.pdf:	%.tex
 	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
