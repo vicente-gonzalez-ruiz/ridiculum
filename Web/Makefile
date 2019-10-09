@@ -15,7 +15,8 @@ index.html:	*.tex \
 		inproceedings.bbl \
 		PFCs.bbl \
 		phdthesis.bbl \
-		projects.bbl \
+		research_projects.bbl \
+		transference_projects.bbl \
 		ResearcherID_URL.tex \
 		ORCID_URL.tex \
 		Scholar_URL.tex \
