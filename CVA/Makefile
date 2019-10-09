@@ -7,7 +7,7 @@ main.pdf:	*.tex \
 		$(HOME)/home/vruiz.bib \
 		PFCs.bbl
 
-PFCs.bbl:	PFCs.tex PFCs.bst ../PFCs.tex ~/home/vruiz.bib
+PFCs.bbl:	../PFCs.tex PFCs.bst ../PFCs.tex ~/home/vruiz.bib
 
 clean:
 	rm *.bbl *.aux *.pdf *.log *.blg *.out
@@ -20,9 +20,9 @@ clean:
                 (export TEXINPUTS=${TEXINPUTS}; pdflatex --interaction errorstopmode $*);	\
         done
 
-%.bbl:	%.tex
+%.bbl:	../%.tex
 	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
 	(export BIBINPUTS=${BIBINPUTS}; bibtex $*)
 
-TEXINPUTS += :$(HOME)/home/personal_data/
+TEXINPUTS += :..:.:$(HOME)/home/personal_data/
 BIBINPUTS += :$(HOME)/home/

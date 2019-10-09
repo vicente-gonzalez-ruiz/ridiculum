@@ -9,17 +9,17 @@ main.pdf:	*.tex \
 		companies.bbl \
 		contracts.bbl \
 		organizations.bbl \
-		transfer_projects.bbl \
+		transference_projects.bbl \
 		workshops.bbl
 
-agreements.bbl:	agreements.tex contracts.bst ../PFCs.tex ~/home/vruiz.bib
-companies.bbl:	companies.tex companies.bst ../PFCs.tex ~/home/vruiz.bib
-organizations.bbl:	organizations.tex organizations.bst ../PFCs.tex ~/home/vruiz.bib
-transfer_projects.bbl:	transfer_projects.tex projects.bst ../PFCs.tex ~/home/vruiz.bib
-workshops.bbl:	workshops.tex workshops.bst ../PFCs.tex ~/home/vruiz.bib
+agreements.bbl:	../agreements.tex contracts.bst ~/home/vruiz.bib
+companies.bbl:	../companies.tex companies.bst ~/home/vruiz.bib
+organizations.bbl:	../organizations.tex organizations.bst ~/home/vruiz.bib
+transference_projects.bbl:	../transference_projects.tex projects.bst ~/home/vruiz.bib
+workshops.bbl:	../workshops.tex workshops.bst ~/home/vruiz.bib
 
 clean:
-	rm *.bbl *.aux *.pdf *.log *.blg *.out
+	rm -f *.bbl *.aux *.pdf *.log *.blg *.out
 
 %.pdf:	%.tex
 	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
@@ -29,9 +29,9 @@ clean:
                 (export TEXINPUTS=${TEXINPUTS}; pdflatex --interaction errorstopmode $*);	\
         done
 
-%.bbl:	%.tex
+%.bbl:	../%.tex
 	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
 	(export BIBINPUTS=${BIBINPUTS}; bibtex $*)
 
-TEXINPUTS += :$(HOME)/home/personal_data/
+TEXINPUTS += :..:.::$(HOME)/home/personal_data/
 BIBINPUTS += :$(HOME)/home/

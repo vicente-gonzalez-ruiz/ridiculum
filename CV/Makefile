@@ -1,4 +1,3 @@
-#TEXINPUTS += "$(HOME)/home/personal_data/:..:.
 TEXINPUTS += ":..:.:$(HOME)/home/personal_data"
 BIBINPUTS += ":$(HOME)/home"
 
