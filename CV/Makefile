@@ -1,3 +1,7 @@
+#TEXINPUTS += "$(HOME)/home/personal_data/:..:.
+TEXINPUTS += ":..:.:$(HOME)/home/personal_data"
+BIBINPUTS += ":$(HOME)/home"
+
 default:	main.pdf
 
 all:		default
@@ -17,43 +21,29 @@ main.pdf:	*.tex \
 		../mi-tesis.tex \
 		organizations.bbl \
 		phdthesis.bbl \
-		projects.bbl \
+		research_projects.bbl \
 		subjects.bbl \
-		transfer_projects.bbl \
+		transference_projects.bbl \
 		workshops.bbl
 
-PFCs.bbl:	PFCs.tex PFCs.bst ~/home/vruiz.bib
-
-agreements.bbl:	agreements.tex contracts.bst ../agreements.tex ~/home/vruiz.bib
-
-articles.bbl:	articles.tex articles.bst ../articles.tex ~/home/vruiz.bib
-
-books.bbl:	books.tex books.bst ../books.tex ~/home/vruiz.bib
-
-companies.bbl:	companies.tex companies.bst ../companies.tex ~/home/vruiz.bib
-
-contracts.bbl:	contracts.tex contracts.bst ../contracts.tex ~/home/vruiz.bib
-
-courses.bbl:	courses.tex courses.bst ../courses.tex ~/home/vruiz.bib
-
-inbooks.bbl:	inbooks.tex inbooks.bst ../inbooks.tex ~/home/vruiz.bib
-
-inproceedings.bbl:	 inproceedings.tex inproceedings.bst ../inproceedings.tex ~/home/vruiz.bib
-
-organizations.bbl:	 organizations.tex organizations.bst ../organizations.tex ~/home/vruiz.bib
-
-phdthesis.bbl:	phdthesis.tex phdthesis.bst ../phdthesis.tex ~/home/vruiz.bib
-
-projects.bbl:	projects.tex projects.bst ../projects.tex ~/home/vruiz.bib
-
-subjects.bbl:	subjects.tex subjects.bst ../subjects.tex ~/home/vruiz.bib
-
-transfer_projects.bbl:	transfer_projects.tex projects.bst ../transfer_projects.tex ~/home/vruiz.bib
-
-workshops.bbl:	 workshops.tex workshops.bst ../workshops.tex ~/home/vruiz.bib
+PFCs.bbl:	../PFCs.tex PFCs.bst ~/home/vruiz.bib
+agreements.bbl:	../agreements.tex contracts.bst ~/home/vruiz.bib
+articles.bbl:	../articles.tex articles.bst ~/home/vruiz.bib
+books.bbl:	../books.tex books.bst ~/home/vruiz.bib
+companies.bbl:	../companies.tex companies.bst ~/home/vruiz.bib
+contracts.bbl:	../contracts.tex contracts.bst ~/home/vruiz.bib
+courses.bbl:	../courses.tex courses.bst ~/home/vruiz.bib
+inbooks.bbl:	../inbooks.tex inbooks.bst ~/home/vruiz.bib
+inproceedings.bbl:	 ../inproceedings.tex inproceedings.bst ~/home/vruiz.bib
+organizations.bbl:	 ../organizations.tex organizations.bst ~/home/vruiz.bib
+phdthesis.bbl:	../phdthesis.tex phdthesis.bst ~/home/vruiz.bib
+research_projects.bbl:	../research_projects.tex projects.bst ~/home/vruiz.bib
+subjects.bbl:	../subjects.tex subjects.bst ~/home/vruiz.bib
+transference_projects.bbl:	../transference_projects.tex projects.bst ~/home/vruiz.bib
+workshops.bbl:	 ../workshops.tex workshops.bst ~/home/vruiz.bib
 
 clean:
-	rm *.bbl *.aux *.pdf *.log *.blg *.out
+	rm -f *.bbl *.aux *.pdf *.log *.blg *.out
 
 %.pdf:	%.tex
 	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
@@ -64,9 +54,6 @@ clean:
                 (export TEXINPUTS=${TEXINPUTS}; pdflatex --interaction errorstopmode $*);	\
         done
 
-%.bbl:	%.tex
+%.bbl:	../%.tex
 	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)
 	(export BIBINPUTS=${BIBINPUTS}; bibtex $*)
-
-TEXINPUTS += :$(HOME)/home/personal_data/
-BIBINPUTS += :$(HOME)/home/
