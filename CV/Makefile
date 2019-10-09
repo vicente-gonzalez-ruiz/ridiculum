@@ -42,7 +42,7 @@ transference_projects.bbl:	../transference_projects.tex projects.bst ~/home/vrui
 workshops.bbl:	 ../workshops.tex workshops.bst ~/home/vruiz.bib
 
 clean:
-	rm -f *.bbl *.aux *.pdf *.log *.blg *.out
+	rm -f *.bbl *.aux *.pdf *.log *.blg *.out *.toc
 
 %.pdf:	%.tex
 	(export TEXINPUTS=${TEXINPUTS}; pdflatex $*)

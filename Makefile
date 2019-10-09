@@ -9,3 +9,6 @@ clean:
 	make -C CV clean
 	make -C CVA clean
 	make -C CVA-trans clean
+
+mrproper:
+	make -C Web mrproper
