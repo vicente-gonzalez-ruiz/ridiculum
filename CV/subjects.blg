@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Arch Linux)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: subjects.aux
+The style file: subjects.bst
+Database file #1: vruiz.bib
+You've used 78 entries,
+            131 wiz_defined-function locations,
+            330 strings with 2914 characters,
+and the built_in function-call counts, 2439 in all, are:
+= -- 0
+> -- 78
+< -- 0
++ -- 78
+- -- 0
+* -- 2
+:= -- 245
+add.period$ -- 78
+call.type$ -- 78
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 78
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 79
+int.to.chr$ -- 0
+int.to.str$ -- 78
+missing$ -- 0
+newline$ -- 236
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 77
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 80
+write$ -- 1250

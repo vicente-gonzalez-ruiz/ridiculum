@@ -1,0 +1,143 @@
+\begin{thebibliography}{10}
+
+\bibitem{SOCIS19-IS}
+\textbf{\href{https://socis.esa.int/projects}{Super-resolution Imaging through
+  High-frequency Subbands Prediction in the Wavelet Domain}.}\newline Founding
+  entity: European Space Agency. \newline Program:
+  \href{https://socis.esa.int/about}{ESA Summer of Code in Space (SoCiS)}
+  2019.\newline Main researchers: Shobhit Patel and García-Sobrino, J.J. and
+  González-Ruiz, V..\newline Budget: Honorable participation.\newline From
+  2019/03/04 until 2019/10/31.\newline Number of researchers: 3.\newline
+  Evidences:
+  \href{https://github.com/vicente-gonzalez-ruiz/Super-resolution_Imaging}{Implementation
+  at GitHub}.
+
+\bibitem{SOCIS19-CR_JHV}
+\textbf{\href{https://socis.esa.int/projects}{Improving the Jhelioviewer client
+  using conditional replenishment}.}\newline Founding entity: European Space
+  Agency. \newline Program: \href{https://socis.esa.int/about}{ESA Summer of
+  Code in Space (SoCiS)} 2019.\newline Main researchers: Dhiraj Sharma and
+  Sánchez-Hernández, J.J. and González-Ruiz, V..\newline Budget: Honorable
+  participation.\newline From 2019/03/04 until 2019/10/31.\newline Number of
+  researchers: 3.\newline Evidences:
+  \href{https://github.com/vicente-gonzalez-ruiz/JHelioviewer-SWHV}{Implementation
+  at GitHub}.
+
+\bibitem{GSoC18-tracker}
+\textbf{\href{http://www.p2psp.org/en/news/78-gsoc-2018-ideas-page}{Development
+  of a tracker of splitters (unfinished)}.}\newline Founding entity: Google
+  Inc.. \newline Program:
+  \href{https://summerofcode.withgoogle.com/archive/2018}{Google Summer of Code
+  (GSoC) 2018}.\newline Main researchers: Chakravorty, S. and García-Ortiz,
+  J.P. and Qiao, Y. and González-Ruiz, V..\newline Budget:
+  $\$2{.}500$.\newline From 2018/04/23 until 2018/08/22.\newline Evidences:
+  \href{https://github.com/P2PSP/simulator/blob/master/src/tracker.py}{Implementation
+  at GitHub},
+  \href{https://drive.google.com/file/d/0B6u6PqmknvGdTnVRcndNU2t1M1RHSDFOdkZjWkw5R3JXUXpj/view?usp=sharing}{Certificate
+  of Appreciation (organization administrator)},
+  \href{https://drive.google.com/file/d/0B6u6PqmknvGdSlN4SkFBZkxrNGtNczNUdFpPa0M1NjZJSzVr/view?usp=sharing}{La
+  Voz de Almería}.
+
+\bibitem{GSoC18-NTS-WebRTC}
+\textbf{\href{http://www.p2psp.org/en/news/78-gsoc-2018-ideas-page}{WebRTC
+  implementation of a NAT traversal procedure based on port prediction
+  (unfinished)}.}\newline Founding entity: Google Inc.. \newline Program:
+  \href{https://summerofcode.withgoogle.com/archive/2018}{Google Summer of Code
+  (GSoC) 2018}.\newline Main researchers: Sahni, P. and González-Ruiz, V. and
+  Casado, L.G..\newline Budget: $\$2{.}500$.\newline From 2018/04/23 until
+  2018/08/22.\newline Evidences:
+  \href{https://drive.google.com/file/d/0B6u6PqmknvGdTnVRcndNU2t1M1RHSDFOdkZjWkw5R3JXUXpj/view?usp=sharing}{Certificate
+  of Appreciation (organization administrator)}.
+
+\bibitem{GSoC17-REST}
+\textbf{\href{https://summerofcode.withgoogle.com/archive/2017/projects/5795608468127744/}{Implementation
+  of a REST WebService for the P2PSP media sources}.}\newline Founding entity:
+  Google Inc.. \newline Program:
+  \href{https://summerofcode.withgoogle.com/archive/2017}{Google Summer of Code
+  (GSoC) 2017}.\newline Main researchers: Gauniyal, A. and García-Ortiz, J.P.
+  and González-Ruiz, V..\newline Budget: $\$6{.}000$.\newline From 2017/06/01
+  until 2017/08/31.\newline Evidences:
+  \href{https://github.com/p2psp/crossroads}{Implementation at GitHub},
+  \href{https://drive.google.com/file/d/1RgNTvxf-6ofEn0ZhlKdqdKfXibbZwnCr/view?usp=sharing}{Project
+  details a the Google Summer of Code Archive (PDF)},
+  \href{https://drive.google.com/file/d/1u6laq9ghFwvpprZJ_m0bKAKTK19d6tWM/view?usp=sharing}{Certificate
+  of Appreciation (organization administrator)}.
+
+\bibitem{GSoC16-EMS}
+\textbf{\href{https://summerofcode.withgoogle.com/archive/2016/projects/6040972701990912/}{Implementation
+  of the End-point Masquerading Set (EMS) of rules of the Peer-to-Peer
+  Straightforward Protocol (P2PSP)}.}\newline Founding entity: Google Inc..
+  \newline Program:
+  \href{https://summerofcode.withgoogle.com/archive/2016}{Google Summer of Code
+  (GSoC) 2016}.\newline Main researchers: Shi, Kevin and Mertens, Max and
+  González-Ruiz, V..\newline Budget: $\$6{.}000$.\newline From 2016/06/23
+  until 2016/08/31.\newline Evidences:
+  \href{https://github.com/P2PSP/core}{Implementation at GitHub},
+  \href{https://drive.google.com/file/d/1ScgE2fPG-0X10gRa5l0yArYoezajhACN/view?usp=sharing}{Project
+  details at the Google Summer of Code Archive (PDF)},
+  \href{https://drive.google.com/file/d/1sQ_ZNh7l4l36GTy-PtoipLWnU6Y0XnyL/view?usp=sharing}{Certificate
+  of Appreciation (mentor)}.
+
+\bibitem{GSoC16-GPG}
+\textbf{\href{https://summerofcode.withgoogle.com/archive/2016/projects/5614166500966400/}{GoPro
+  Broadcasting Using P2PSP On Android}.}\newline Founding entity: Google Inc..
+  \newline Program:
+  \href{https://summerofcode.withgoogle.com/archive/2016}{Google Summer of Code
+  (GSoC) 2016}.\newline Main researchers: Ravi, Sravan and García Salmerón,
+  José Manuel and González-Ruiz, V..\newline Budget: $\$6{.}000$.\newline
+  From 2016/06/23 until 2016/08/31.\newline Evidences:
+  \href{https://github.com/P2PSP/gopro}{Implementation at GitHub},
+  \href{https://drive.google.com/file/d/1bYehNpQTGNzTtGHzG4M1KlnEqrct7HJ7/view?usp=sharing}{Project
+  details at the Google Summer of Code Archive (PDF)},
+  \href{https://drive.google.com/file/d/1sQ_ZNh7l4l36GTy-PtoipLWnU6Y0XnyL/view?usp=sharing}{Certificate
+  of Appreciation (mentor)}.
+
+\bibitem{GSoC15-NTS}
+\textbf{\href{https://www.google-melange.com/archive/gsoc/2015/orgs/p2psp/projects/jellysheep.html}{NAT
+  traversal via hole punching Set of Rules for P2PSP}.}\newline Founding
+  entity: Google Inc.. \newline Program:
+  \href{https://summerofcode.withgoogle.com/archive/2015}{Google Summer of Code
+  (GSoC) 2015}.\newline Main researchers: Mertens, M. and García-Ortiz, J.P.
+  and González-Ruiz, V..\newline Budget: $\$6{.}000$.\newline From 2015/05/25
+  until 2015/08/31.\newline Evidences:
+  \href{https://github.com/P2PSP/core/tree/master/doc/NTS}{Implementation at
+  GitHub},
+  \href{http://web.archive.org/web/20160625050102/https://www.google-melange.com/gsoc/project/details/google/gsoc2015/jellysheep/5700735861784576}{Project
+  details at The Internet Archive},
+  \href{https://drive.google.com/file/d/1CTpzEiYG7QiPRgiEgoIvpmu1zK97tURn/view?usp=sharing}{Project
+  details at The Internet Archive (PDF)}.
+
+\bibitem{SOCIS12-JHC}
+\textbf{\href{http://wiki.helioviewer.org/wiki/SOCIS-2012_Ideas}{The
+  Helioviewer Channel}.}\newline Founding entity: European Space Agency.
+  \newline Program:
+  \href{https://www.esa.int/Our_Activities/Space_Engineering_Technology/SOCIS_The_ESA_Summer_of_Code_in_Space}{ESA
+  Summer of Code in Space (SoCiS)} 2012.\newline Main researchers: K\"ovesdán,
+  G. and García-Ortiz, J.P. and González-Ruiz, V..\newline Budget: $4{.}000$
+  \euro.\newline From 2012/06/10 until 2012/10/28.\newline Number of
+  researchers: 3.\newline Evidences:
+  \href{https://github.com/vicente-gonzalez-ruiz/jhelioviewer-socis2012}{Implementation
+  at GitHub}.
+
+\bibitem{SOCIS11-JPIP}
+\textbf{\href{http://wiki.helioviewer.org/wiki/SOCIS-2011_Ideas}{Interactive HD
+  Video Streaming with JPIP}.}\newline Founding entity: European Space Agency.
+  \newline Program:
+  \href{https://www.esa.int/Our_Activities/Space_Engineering_Technology/SOCIS_The_ESA_Summer_of_Code_in_Space}{ESA
+  Summer of Code in Space (SoCiS)} 2011.\newline Main researchers:
+  García-Ortiz, J.P. and González-Ruiz, V. and Sánchez-Hernández,
+  J.J..\newline Budget: $3{.}000$ \euro.\newline From 2011/07/01 until
+  2011/10/30.\newline Number of researchers: 3.\newline Evidences:
+  \href{https://code.launchpad.net/~josejuan-sanchez/jhelioviewer/soc}{JHelioviewer
+  - JPEG2000 Visualization Software},
+  \href{https://code.launchpad.net/~josejuan-sanchez/esajpip/soc}{ESA JPIP
+  Server}.
+
+\bibitem{TEDIAL-2}
+\textbf{Codificación eficiente de imágenes DICOM y TRANSCODING de secuencias
+  de video MPEG.}\newline Founding entity: Junta de Andalucía. Consejería de
+  Educación y Ciencia. \newline Main researchers: Inmaculada García
+  Fernández.\newline Budget: $6{.}000$ \euro.\newline From 2004/04/01 until
+  2005/12/31.\newline Number of researchers: 4.
+
+\end{thebibliography}
