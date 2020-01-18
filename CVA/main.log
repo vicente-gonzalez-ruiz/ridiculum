@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.12.17)  13 JAN 2020 00:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.12.17)  18 JAN 2020 07:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -179,8 +179,8 @@ Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
 (/home/vruiz/home/personal_data/ResearcherID.tex)
 (/home/vruiz/home/personal_data/Google_user.tex) (./main.aux
-LaTeX Info: Redefining \. on input line 24.
-LaTeX Info: Redefining \% on input line 24.
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
 )
 \openout1 = `main.aux'.
 
@@ -310,7 +310,7 @@ m-super/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss120
 re/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texmf-dist/f
 onts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/cm-super/sftt1000.pfb>
-Output written on main.pdf (5 pages, 145381 bytes).
+Output written on main.pdf (5 pages, 145388 bytes).
 PDF statistics:
  189 PDF objects out of 1000 (max. 8388607)
  172 compressed objects within 2 object streams

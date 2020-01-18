@@ -1,5 +1,55 @@
 \begin{thebibliography}{10}
 
+\bibitem{santamaria2019}
+T.~Santamaria-Lopez, G.~Lagos~Reinoso, S.~Jacome, E.L. Benavides, and
+  V.~González-Ruiz.
+  \href{http://dx.doi.org/10.21125/edulearn.2019.0880}{Didactic materials
+  through Arduino shields to stimulate programming motivation}. In {\em 11th
+  International Conference on Education and New Learning Technologies (EDULEARN
+  2019)}, pages 3265--3272, 2019. .
+\href{http://www.hpca.ual.es/~vruiz/papers/santamaria2019.bib}{Bibtex entry.}
+\bibitem{gonzalez2019collaborative}
+V.~González-Ruiz, G.~Ortega, E.M. Garzón, N.C. Cruz, J.L. Redondo, J.M.G.
+  Salmerón, L.G. Casado, P.M. Ortigosa, C.~Medina-López, J.J. Moreno,
+  M.~Ruiz-Ferrández, F.~Orts, S.~Puertas-Martín, and T.~Santamaría-López.
+  \href{http://dx.doi.org/10.21125/edulearn.2019.2138}{Collaborative
+  project-based learning: An experience}. In {\em 11th International Conference
+  on Education and New Learning Technologies (EDULEARN 2019)}, pages
+  8631--8635, 2019. .
+\href{http://www.hpca.ual.es/~vruiz/papers/gonzalez2019collaborative.bib}{Bibtex
+  entry.}
+\bibitem{orts2019learning}
+F.~Orts, N.C. Cruz, S.~Puertas-Martín, M.~Ruiz-Ferrández, J.J. Moreno,
+  C.~Medina-López, P.M. Ortigosa, V.G. González-Ruíz, L.G. Casado, J.M.G.
+  Salmerón, J.L. Redondo, E.M. Garzón, G.~Ortega, and R.~Villegas.
+  \href{http://dx.doi.org/doi: 10.21125/iceri.2018.0300}{Learning Quantum
+  Computation through simple examples}. In {\em International Conference of
+  Education, Research and Innovation (ICERI 2018)}, pages 7331--7337, 2019. .
+\href{http://www.hpca.ual.es/~vruiz/papers/orts2019learning.bib}{Bibtex entry.}
+\bibitem{orts2019recursos}
+F.~Orts, G.~Ortega, N.C. Cruz, S.~Puertas-Martín, M.~Ruiz-Ferrández, J.J.
+  Moreno, C.~Medina-López, P.M. Ortigosa, V.~González-Ruiz, L.G. Casado,
+  J.M.G. Salmerón, J.L. Redondo, R.~Villegas, and E.M. Garzón.
+  \href{}{Recursos para el aprendizaje de computación cuántica en el grado de
+  Ingeniería Informática}. In {\em Jornadas de Innovación Docente}, 2019. .
+\href{http://www.hpca.ual.es/~vruiz/papers/orts2019recursos.bib}{Bibtex entry.}
+\bibitem{SH19}
+J.J. S\'anchez-Hern\'andez, V.~Gonz\'alez-Ruiz, J.P. Garc\'{\i}a-Ortiz, and
+  D.~M\"uller.
+  \href{https://drive.google.com/open?id=1f8wnN9s--3TIAmHM5dLSG0M0DJMPwdWG}{Client-driven
+  Transmission of JPEG2000 Image Sequences using Motion Compensated Conditional
+  Replenishment}. In A.~Bilgin, M.W. Marcellin, J.~Serra-Sagrista, and J.A.
+  Storer, editors, {\em Proceedings of Data Compression Conference (DCC)},
+  pages 602--602, march 2019. Snowbird, Utah, USA.
+\href{http://www.hpca.ual.es/~vruiz/papers/SH19.bib}{Bibtex entry.}
+\bibitem{orts2018simulacion}
+F.~Orts, S.~Puertas-Martín, J.J. Moreno, N.C. Cruz, J.L. Redondo, E.M.
+  Garzón, P.M. Ortigosa, G.~Ortega, C.~Medina-López, V.~González-Ruiz, L.G.
+  Casado, J.M.G. Salmerón, T.M. Santamaría, and J.F. Sanjuan-Estrada.
+  \href{}{Simulación de un procesador ARM para enseñanza de Estructura de
+  Computadores}. In {\em Jornadas de Innovación Docente}, 2018. .
+\href{http://www.hpca.ual.es/~vruiz/papers/orts2018simulacion.bib}{Bibtex
+  entry.}
 \bibitem{maturana2018rate}
 J.C. Maturana-Espinosa, V.~Gonz\'alez-Ruiz, J.P. Garc\'{\i}a-Ortiz, and
   D.~M\"uller. \href{http://www.hpca.ual.es/~vruiz/papers/ME18.pdf}{Rate

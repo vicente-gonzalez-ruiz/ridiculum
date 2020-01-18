@@ -6,7 +6,7 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: vruiz.bib
 You've used 13 entries,
             910 wiz_defined-function locations,
-            457 strings with 6390 characters,
+            457 strings with 6393 characters,
 and the built_in function-call counts, 1592 in all, are:
 = -- 26
 > -- 191
