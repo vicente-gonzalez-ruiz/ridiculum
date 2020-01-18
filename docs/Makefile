@@ -48,7 +48,7 @@ GitHub_URL.tex:	$(HOME)/home/personal_data/GitHub_user.tex
 	(export TEXINPUTS=${TEXINPUTS}; latex $*)
 	(export TEXINPUTS=${TEXINPUTS}; latex $*)
 	(export TEXINPUTS=${TEXINPUTS}; latex $*)
-	(export TEXINPUTS=${TEXINPUTS}; htlatex $* "math.cfg, charset=utf-8" " -cunihtf -utf8")
+	(export TEXINPUTS=${TEXINPUTS}; htlatex $* "tex4ht.cfg, charset=utf-8" " -cunihtf -utf8")
 #       (export TEXINPUTS=${TEXINPUTS}; tth $* > $*.html)
 
 clean:
@@ -66,6 +66,6 @@ publish:
 	scp index.css dali.hpca.ual.es:public_html/index.css
 	scp *.bib dali.hpca.ual.es:public_html/papers
 
-TEXINPUTS := ":.:..:$(HOME)/home/personal_data:"
+TEXINPUTS := ".:..:$(HOME)/home/personal_data:"
 BIBINPUTS := "$(HOME)/home:"
 
