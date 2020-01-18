@@ -48,7 +48,7 @@ GitHub_URL.tex:	$(HOME)/home/personal_data/GitHub_user.tex
 	(export TEXINPUTS=${TEXINPUTS}; latex $*)
 	(export TEXINPUTS=${TEXINPUTS}; latex $*)
 	(export TEXINPUTS=${TEXINPUTS}; latex $*)
-	(export TEXINPUTS=${TEXINPUTS}; htlatex $*)
+	(export TEXINPUTS=${TEXINPUTS}; htlatex $* "math.cfg, charset=utf-8" " -cunihtf -utf8")
 #       (export TEXINPUTS=${TEXINPUTS}; tth $* > $*.html)
 
 clean:
