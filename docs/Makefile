@@ -11,6 +11,7 @@ index.html:	*.tex \
 		books.bbl \
 		contracts.bbl \
 		courses.bbl \
+		courses_received.bbl \
 		inbooks.bbl \
 		inproceedings.bbl \
 		PFCs.bbl \
