@@ -19,6 +19,7 @@ index.html:	*.tex \
 		research_projects.bbl \
 		transference_projects.bbl \
 		teaching_projects.bbl \
+		OSPs.bbl \
 		ResearcherID_URL.tex \
 		ORCID_URL.tex \
 		Scholar_URL.tex \
