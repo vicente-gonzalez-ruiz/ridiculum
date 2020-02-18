@@ -41,11 +41,11 @@ FUNCTION {OSP}
   % Título y código
   "\textbf{" write$
   title write$
-  ".}" write$
+  ".} " write$
 
   % People
   people write$
-  "." write$
+  ". " write$
 
   % Since
   since write$
