@@ -1,9 +1,9 @@
 % BibTeX standard bibliography style `Open Source Projects'
 
 ENTRY
-  { title      % Título del proyecto.
-    people     % Involucrados.
-    since      % Fecha de creación.
+  { title        % Título del proyecto.
+    contributors % Involucrados.
+    since        % Fecha de creación.
   }
   % There are no integer entry variables
   {}
@@ -41,10 +41,11 @@ FUNCTION {OSP}
   % Título y código
   "\textbf{" write$
   title write$
-  ".} " write$
+  "}. " write$
 
   % People
-  people write$
+  "Contributors: " write$
+  contributors write$
   ". " write$
 
   % Since
