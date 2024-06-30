@@ -52,7 +52,7 @@ ENTRY
 %    quality
 %    subject_categories
     url
-%    doi
+    doi
   }
 % There are no integer entry variables
   {}
@@ -893,17 +893,18 @@ FUNCTION {inproceedings}
 %    { format.incoll.inproc.crossref output.nonnull
 %      format.pages output
 %    }
-%  if$ doi empty$ {
-%    } {
-%    "DOI: " write$
-%    "\href{http://dx.doi.org/" write$
-%    doi  write$
-%    "}{" write$
-%    doi write$
-%    "}" write$
-%    ". " write$
-%  }
-%  if$
+  %  if$
+  doi empty$ {
+    } {
+    "DOI: " write$
+    "\href{http://dx.doi.org/" write$
+    doi  write$
+    "}{" write$
+    doi write$
+    "}" write$
+    ". " write$
+  }
+  if$
   format.authors write$
   ". " write$
 %  "\href{" write$

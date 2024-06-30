@@ -29,7 +29,7 @@ ENTRY
 %    quality
 %    subject_categories
     url
-%    doi
+    doi
   }
 % There are no integer entry variables
   {}
@@ -985,17 +985,17 @@ FUNCTION {article}
   "\href{http://www.hpca.ual.es/~vruiz/papers/" write$
   cite$ write$
   ".bib}{Bibtex entry.}" write$
-%  doi empty$
-%    {
-%    }
-%    {
-%       " DOI: \href{" write$
-%       doi write$
-%       "}{" write$
-%       doi write$
-%       "}" write$
-%    }
-%  if$
+  doi empty$
+    {
+    }
+    {
+       " DOI: \href{" write$
+       doi write$
+       "}{" write$
+       doi write$
+       "}" write$
+    }
+  if$
 }
 % We use entry type `misc' for an unknown type; BibTeX gives a warning.
 FUNCTION {default.type} { article }
