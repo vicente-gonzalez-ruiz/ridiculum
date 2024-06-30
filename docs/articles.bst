@@ -28,8 +28,8 @@ ENTRY
     ISSN
 %    quality
 %    subject_categories
-    url
-%    doi
+%    url
+    DOI
   }
 % There are no integer entry variables
   {}
@@ -895,11 +895,12 @@ FUNCTION {article}
 %  "\textbf{Autores:} " write$
   format.authors write$
   ". " write$
-  "\href{" write$
-  url write$
-  "}{" write$
+  %"\href{" write$
+  %url write$
+  %"}{" write$
   format.title write$
-  "}. " write$
+  %"}. " write$
+  ". " write$
   journal write$
   volume empty$
     {
@@ -982,20 +983,20 @@ FUNCTION {article}
   new.block
   %note output
   fin.entry
+  DOI empty$
+    {
+    }
+    {
+       " DOI: \href{https://doi.org/" write$
+       DOI write$
+       "}{" write$
+       DOI write$
+       "}. " write$
+    }
+  if$
   "\href{http://www.hpca.ual.es/~vruiz/papers/" write$
   cite$ write$
   ".bib}{Bibtex entry.}" write$
-%  doi empty$
-%    {
-%    }
-%    {
-%       " DOI: \href{" write$
-%       doi write$
-%       "}{" write$
-%       doi write$
-%       "}" write$
-%    }
-%  if$
 }
 % We use entry type `misc' for an unknown type; BibTeX gives a warning.
 FUNCTION {default.type} { article }
