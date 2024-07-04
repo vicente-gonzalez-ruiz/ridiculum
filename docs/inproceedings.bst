@@ -51,8 +51,8 @@ ENTRY
     ISSN
 %    quality
 %    subject_categories
-    url
-%    doi
+%    url
+    doi
   }
 % There are no integer entry variables
   {}
@@ -917,20 +917,22 @@ FUNCTION {inproceedings}
 %      "}{" write$
 %    }
 %  if$
-  "\href{" write$
-  url write$
-  "}{" write$
+%  "\href{" write$
+%  url write$
+%  "}{" write$
+%  format.title write$
+%  "}. " write$
+%  format.in.ed.booktitle write$
+%  ", " write$
+%  pages empty$
+%  {}
+%  {
+%    format.pages write$
+%    ", " write$
+%  }
+%  if$
   format.title write$
-  "}. " write$
-  format.in.ed.booktitle write$
-  ", " write$
-  pages empty$
-  {}
-  {
-    format.pages write$
-    ", " write$
-  }
-  if$
+  ". " write$
   format.date write$
   ". " write$
   address empty$
@@ -941,6 +943,17 @@ FUNCTION {inproceedings}
   new.block
   note output
   fin.entry
+  DOI empty$
+    {
+    }
+    {
+       " DOI: \href{https://doi.org/" write$
+       DOI write$
+       "}{" write$
+       DOI write$
+       "}. " write$
+    }
+  if$
   "\href{http://www.hpca.ual.es/~vruiz/papers/" write$
   cite$ write$
   ".bib}{Bibtex entry.}" write$

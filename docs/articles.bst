@@ -934,14 +934,14 @@ FUNCTION {article}
   %     issn write$
   %  }
   %if$
-  month empty$
-    {
-    }
-    {
-       ", " write$
-       month write$
-    }
-  if$
+  %month empty$
+  %  {
+  %  }
+  %  {
+  %     ", " write$
+  %     month write$
+  %  }
+  %if$
   year empty$
     {
     }
