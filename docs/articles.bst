@@ -28,8 +28,9 @@ ENTRY
     ISSN
 %    quality
 %    subject_categories
-%    url
+    URL
     DOI
+    citations
   }
 % There are no integer entry variables
   {}
@@ -898,7 +899,24 @@ FUNCTION {article}
   %"\href{" write$
   %url write$
   %"}{" write$
+  URL empty$
+    {
+    }
+    {
+       "\href{" write$
+       URL write$
+       "}{" write$
+    }
+  if$
   format.title write$
+  URL empty$
+    {
+    }
+    {
+       "}" write$
+
+    }
+  if$
   %"}. " write$
   ". " write$
   journal write$
@@ -992,6 +1010,15 @@ FUNCTION {article}
        "}{" write$
        DOI write$
        "}. " write$
+    }
+  if$
+  citations empty$
+    {
+    }
+    {
+       "\href{" write$
+       citations write$
+       "}{Citations}. " write$
     }
   if$
   "\href{http://www.hpca.ual.es/~vruiz/papers/" write$
