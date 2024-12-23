@@ -51,7 +51,7 @@ ENTRY
     ISSN
 %    quality
 %    subject_categories
-%    url
+    url
     doi
   }
 % There are no integer entry variables
