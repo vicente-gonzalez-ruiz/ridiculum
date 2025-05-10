@@ -7,6 +7,7 @@ index.html:	*.tex \
 		$(HOME)/home/personal_data \
 		$(HOME)/home/vruiz.bib \
 		articles.bbl \
+		NI_articles.bbl \
 		subjects.bbl \
 		books.bbl \
 		contracts.bbl \
