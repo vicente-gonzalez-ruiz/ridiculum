@@ -931,8 +931,25 @@ FUNCTION {inproceedings}
 %    format.pages write$
 %    ", " write$
 %  }
-%  if$
+  %  if$
+  URL empty$
+    {
+    }
+    {
+       "\href{" write$
+       URL write$
+       "}{" write$
+    }
+  if$
   format.title write$
+  URL empty$
+    {
+    }
+    {
+       "}" write$
+
+    }
+  if$
   ". " write$
   format.date write$
   ". " write$
