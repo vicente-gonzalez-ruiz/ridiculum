@@ -1,5 +1,5 @@
 default:
-	make -C Web
+	make -C Web all
 	make -C CV
 	make -C CVA
 	make -C CVA-trans
