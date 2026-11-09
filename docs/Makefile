@@ -17,6 +17,7 @@ index.html:	*.tex \
 		inproceedings.bbl \
 		PFCs.bbl \
 		phdthesis.bbl \
+		future_phdthesis.bbl \
 		research_projects.bbl \
 		transference_projects.bbl \
 		teaching_projects.bbl \
